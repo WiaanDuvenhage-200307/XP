@@ -3,34 +3,34 @@
 <!-- Repository Information & Links-->
 <br />
 
-![GitHub repo size](https://img.shields.io/github/repo-size/WiaanDuvenhage-200307/salubrious)
-![GitHub watchers](https://img.shields.io/github/watchers/WiaanDuvenhage-200307/salubrious)
-![GitHub language count](https://img.shields.io/github/languages/count/WiaanDuvenhage-200307/salubrious)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/WiaanDuvenhage-200307/salubrious)
+![GitHub repo size](https://img.shields.io/github/repo-size/WiaanDuvenhage-200307/XP)
+![GitHub watchers](https://img.shields.io/github/watchers/WiaanDuvenhage-200307/XP)
+![GitHub language count](https://img.shields.io/github/languages/count/WiaanDuvenhage-200307/XP)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/WiaanDuvenhage-200307/XP)
 
 <!-- HEADER SECTION -->
 <h5 align="center" style="padding:0;margin:0;">Wiaan Duvenhage</h5>
 <h5 align="center" style="padding:0;margin:0;">200307</h5>
-<h6 align="center">DV200 | Term 2</h6>
+<h6 align="center">DV203 | Android Introduction</h6>
 </br>
 <p align="center">
 
-  <a href="https://github.com/WiaanDuvenhage-200307/salubrious">
+  <a href="https://github.com/WiaanDuvenhage-200307/XP">
     <img src="src\components\assets\logo.svg" alt="Logo" width="100px">
   </a>
 
-<h3 align="center">Salubrious</h3>
+<h3 align="center">XP</h3>
 
   <p align="center">
-    A React project built with React, PHP & MySQL .<br>
+    A Kotlin Application that quizzes users on their Esport knowledge.<br>
 
    <br />
    <br />
-   <a href="https://youtu.be/Oag-DdqW9jA">View Demo</a>
+   <a href="URL">View Demo</a>
     ·
-    <a href="https://github.com/WiaanDuvenhage-200307/salubrious/issues">Report Bug</a>
+    <a href="https://github.com/WiaanDuvenhage-200307/XP/issues">Report Bug</a>
     ·
-    <a href="https://github.com/WiaanDuvenhage-200307/salubrious/issues">Request Feature</a>
+    <a href="https://github.com/WiaanDuvenhage-200307/XP/issues">Request Feature</a>
 </p>
 <!-- TABLE OF CONTENTS -->
 
@@ -65,19 +65,16 @@
 
 <!-- header image of project -->
 
-![image1](src/components/assets/Mockup3.jpg)
+![image1](PATH)
 
 ### Project Description
 
-Welcome to Salubrious! This is a receptionists management portal that I built using React, PHP & MySQL. It is a CRUD-system that can create, read, update & delete.
+Welcome to XP! An Esports Quiz Android Application built using Kotlin that quizzes users on their Esports Knowledge
 
 ### Built With
 
-- [React](https://reactjs.org/)
-- [PHP](https://www.php.net/)
-- [MySQL](https://www.mysql.com/)
-- [MAMP for Windows](https://www.mamp.info/en/windows/)
-- [tailwindcss](https://tailwindcss.com/)
+- [Kotlin](https://kotlinlang.org/)
+- [Android Studio](https://developer.android.com/studio?gclid=Cj0KCQjwz96WBhC8ARIsAATR250jFPJ2MONLOS8qGczwV0KT2LHqQajMSI2-vzVV2HNleq99xP50m_kaAkJiEALw_wcB&gclsrc=aw.ds)
 
 <!-- GETTING STARTED -->
 <!-- Make sure to add appropriate information about what prerequesite technologies the user would need and also the steps to install your project on their own mashines -->
@@ -91,13 +88,13 @@ The following instructions will get you a copy of the project up and running on 
 Here are a couple of ways to clone this repo:
 
 1.  GitHub Desktop </br>
-    Enter `https://github.com/WiaanDuvenhage-200307/salubrious.git` into the URL field and press the `Clone` button.
+    Enter `https://github.com/WiaanDuvenhage-200307/XP.git` into the URL field and press the `Clone` button.
 
 2.  Clone Repository </br>
     Run the following in the command-line to clone the project:
 
     ```sh
-    git clone https://github.com/WiaanDuvenhage-200307/salubrious.git
+    git clone https://github.com/WiaanDuvenhage-200307/XP.git
     ```
 
         Open `Software` and select `File | Open...` from the menu. Select cloned directory and press `Open` button
@@ -118,22 +115,22 @@ Here are a couple of ways to clone this repo:
 
 ### Adding an Appointment
 
-![image5](src/components/assets/Function1.jpg)
+![image5](PATH)
 The receptionist can add an appointment by assigning a patient to a doctor. They can add the name, date and time and it will display on the page when the page auto-refreshes.
 
 ### Scroll Through Calendar
 
-![image6](src/components/assets/Function2.jpg)
+![image6](PATH)
 The receptionist can scroll through the calendar to see which date falls on which day, the receptionist can go forward or backward in time using the arrows underneath the month's name.
 
 ### Add Doctor/Patient
 
-![image7](src/assets/Function3.jpg)
+![image7](PATH)
 The receptionist can add a new doctor or patient's information into the modal and it will push to the database and display on the page after it refreshes.
 
 ### Only Head Receptionist can add
-![image8](src/components/assets/Function4.jpg)
-![image10](src/components/assets/Function4-1.jpg)
+![image8](PATH)
+![image10](PATH)
 The head receptionist is the only one authorized to add, delete or update appointments, patients & doctors
 
 <!-- CONCEPT PROCESS -->
@@ -146,9 +143,9 @@ It was very evident that blue is something that is very evident when designing d
 
 ### Wireframes
 
-![image9](src/components/assets/wireframe-dash.png)
-![image11](src/components/assets/wireframe-doctors.png)
-![image12](src/components/assets/wireframe-signup.png)
+![image9](PATH)
+![image11](PATH)
+![image12](PATH)
 
 ## Development Process
 
@@ -209,10 +206,10 @@ The aspects I learned outside of this class, is that I implemented tailwindcss t
 
 <!-- TODO Change this -->
 
-![image2](src/components/assets/Mockup1.jpg)
-![image3](src/components/assets/Mockup3.jpg)
-![image4](src/components/assets/Mockup4.jpg)
-![image5](src/components/assets/Mockup5.jpg)
+![image2](PATH)
+![image3](PATH)
+![image4](PATH)
+![image5](PATH)
 <br>
 
 
@@ -224,9 +221,9 @@ The aspects I learned outside of this class, is that I implemented tailwindcss t
 
 To see a run through of the application, click below:
 
-[View Demonstration](https://youtu.be/Oag-DdqW9jA)
+[View Demonstration](URL)
 
-See the [open issues](https://github.com/WiaanDuvenhage-200307/salubrious/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/WiaanDuvenhage-200307/XP/issues) for a list of proposed features (and known issues).
 
 <!-- AUTHORS -->
 
@@ -245,7 +242,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 ## Contact
 
 - **Wiaan Duvenhage** - [wiaanduvenhage.dev@gmail.com](mailto:wiaanduvenhage.dev@gmail.com) - [@wiaan.dev](https://www.instagram.com/wiaan.dev/)
-- **Project Link** - https://github.com/WiaanDuvenhage-200307/salubrious
+- **Project Link** - https://github.com/WiaanDuvenhage-200307/XP
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -259,5 +256,3 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 - [Figma](https://www.figma.com/)
 - [My Pinterest Board](https://za.pinterest.com/doubleudeedesigns/budget-app/)
 - [(w3schools) SQL SELECT Statement](https://www.w3schools.com/sql/sql_select.asp)
-- [Leander van Aarde](https://github.com/LeandervanAarde)
-- [Vian Du Plessis](https://github.com/Vian-du-Plessis)
