@@ -3,9 +3,9 @@ package com.example.xp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class MainActivity : AppCompatActivity() {
+class HomePageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main) //this sets what XML frontend to use
+        setContentView(R.layout.home_page) //this sets what XML frontend to use
     }
 }
