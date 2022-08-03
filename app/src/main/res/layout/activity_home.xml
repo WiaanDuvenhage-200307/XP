@@ -100,10 +100,11 @@
         android:layout_marginTop="350sp"
         android:id="@+id/nameInput">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/greetsubtext"
+            android:layout_below="@+id/subtext"
             android:layout_marginTop="40sp"
             android:inputType="text"
             />
