@@ -16,6 +16,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root) //this sets what XML frontend to use
+//        var actionBar = supportActionbar?.hide()
 
         binding.button.setOnClickListener{
 
