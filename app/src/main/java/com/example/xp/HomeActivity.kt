@@ -30,8 +30,10 @@ class HomeActivity : AppCompatActivity() {
                 snackbar.show()
                 binding.userName.error = "Please add username"
             }else {
-                startActivity(Intent(this@HomeActivity, CategoriesActivity::class.java))
+                val intent = Intent(this, CategoriesActivity::class.java)
                 intent.putExtra("username", username.toString())
+                startActivity(intent)
+
 
 
             }
