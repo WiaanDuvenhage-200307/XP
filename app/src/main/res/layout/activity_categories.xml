@@ -71,7 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="60dp"
-        android:src="@drawable/cod"
+        android:src="@drawable/csgo"
         app:layout_constraintStart_toEndOf="@+id/imageButton"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="60dp"
-        android:src="@drawable/cod"
+        android:src="@drawable/fortnite"
         app:layout_constraintStart_toEndOf="@+id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -90,7 +90,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:src="@drawable/cod"
+        android:src="@drawable/league"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
@@ -100,7 +100,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:src="@drawable/cod"
+        android:src="@drawable/ow"
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
@@ -109,7 +109,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:src="@drawable/cod"
+        android:src="@drawable/valorant"
         app:layout_constraintStart_toEndOf="@+id/imageButton5"
         app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
 
