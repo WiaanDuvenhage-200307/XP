@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ralewaybold"
-        android:text="Dave"
+        android:text="Name"
         android:textColor="@color/red"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/textView"
@@ -57,7 +57,7 @@
         tools:layout_editor_absoluteX="30dp" />
 
     <ImageView
-        android:id="@+id/imageButton"
+        android:id="@+id/iv_cod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -66,54 +66,56 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_subheading" />
 
     <ImageView
-        android:id="@+id/imageButton2"
+        android:id="@+id/iv_csgo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="60dp"
         android:src="@drawable/csgo"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintStart_toEndOf="@+id/iv_cod"
         app:layout_constraintTop_toBottomOf="@+id/tv_subheading" />
 
     <ImageView
-        android:id="@+id/imageButton4"
+        android:id="@+id/iv_fortnite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="60dp"
         android:src="@drawable/fortnite"
-        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintStart_toEndOf="@+id/iv_csgo"
         app:layout_constraintTop_toBottomOf="@+id/tv_subheading" />
 
     <ImageView
-        android:id="@+id/imageButton3"
+        android:id="@+id/iv_lol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:src="@drawable/league"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_cod" />
 
     <ImageView
-        android:id="@+id/imageButton5"
+        android:id="@+id/iv_ow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/ow"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+        app:layout_constraintStart_toEndOf="@+id/iv_lol"
+        app:layout_constraintTop_toBottomOf="@+id/iv_csgo" />
 
     <ImageView
+        android:id="@+id/iv_valorant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/valorant"
-        app:layout_constraintStart_toEndOf="@+id/imageButton5"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+        app:layout_constraintStart_toEndOf="@+id/iv_ow"
+        app:layout_constraintTop_toBottomOf="@+id/iv_fortnite" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_random_category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -124,7 +126,7 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton5"/>
+        app:layout_constraintTop_toBottomOf="@+id/iv_lol"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

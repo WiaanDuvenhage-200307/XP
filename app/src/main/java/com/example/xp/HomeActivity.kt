@@ -33,9 +33,6 @@ class HomeActivity : AppCompatActivity() {
                 val intent = Intent(this, CategoriesActivity::class.java)
                 intent.putExtra("username", username.toString())
                 startActivity(intent)
-
-
-
             }
         }
     }
