@@ -2,5 +2,13 @@
     <string name="app_name">XP</string>
     <string name="app_desc">This is an esports quiz app</string>
 
-    <string name="main_heading">Are you A Robot?</string>
+    <!-- Home Page Strings -->
+    <string name="welcome">Welcome to XP</string>
+    <string name="welcome_sub">The worlds best Esport`s Quiz</string>
+    <string name="info">You Know Your Esports?</string>
+    <string name="info_sub">Test your knowledge now and gain XP</string>
+
+    <!-- Button Strings -->
+    <string name="next">Next</string>
+    <string name="restart">Start Over</string>
 </resources>

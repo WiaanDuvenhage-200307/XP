@@ -19,7 +19,7 @@
         android:layout_marginTop="102sp"
         android:fontFamily="@font/ralewaybold"
         android:paddingLeft="30sp"
-        android:text="Welcome to XP!"
+        android:text="@string/welcome"
         android:textColor="@color/red"
         android:textSize="28sp" />
 
@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/subtext"
-        android:text="The World's best Esport's Quiz"
+        android:text="@string/welcome_sub"
         android:textColor="@color/white"
         android:fontFamily="@font/ralewayregular"
         android:layout_below="@+id/heading"
@@ -45,10 +45,11 @@
             app:cardCornerRadius="74sp">
 
             <ImageView
+                android:id="@+id/btn_settings"
                 android:layout_width="60sp"
                 android:layout_height="60sp"
                 android:layout_gravity="center"
-                android:padding="10sp"
+                android:padding="16sp"
                 android:src="@drawable/settings" />
         </androidx.cardview.widget.CardView>
 
@@ -70,21 +71,21 @@
 
 
         <TextView
-            android:layout_marginTop="20sp"
-            android:layout_width="match_parent"
             android:id="@+id/greetheading"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
             android:fontFamily="@font/ralewaybold"
-            android:text="Do you know your Esports?"
+            android:text="@string/info"
             android:textColor="@color/black"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ralewayregular"
             android:id="@+id/greetsubtext"
-            android:text="Test your knowledge now and gain XP "
+            android:text="@string/info_sub"
             android:textColor="@color/black"
             android:textSize="14dp"
             android:layout_below="@+id/greetheading"
@@ -118,7 +119,7 @@
         android:fontFamily="@font/ralewayregular"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:text="Next"
+        android:text="@string/next"
         android:textColor="@color/black"
         android:id="@+id/button"/>
 

@@ -31,6 +31,9 @@ class HomeActivity : AppCompatActivity() {
                 binding.userName.error = "Please add username"
             }else {
                 startActivity(Intent(this@HomeActivity, CategoriesActivity::class.java))
+                intent.putExtra("username", username.toString())
+
+
             }
         }
     }

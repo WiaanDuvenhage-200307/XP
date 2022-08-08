@@ -19,7 +19,7 @@ object Constants {
 
         val que2 = Question(
             2,
-            "Who was MVP in the 2016 World Championship?",
+            "What is this map called?",
             R.drawable.ic_launcher_foreground
             //insert drawable of player img,
             //insert inputs of text letters which will represent buttons

@@ -69,6 +69,14 @@
         android:textColor="@color/white"
         android:textSize="14sp"/>
 
+    <TextView
+        android:id="@+id/tv_question_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is the question"
+        android:textColor="@color/red"
+        />
+
 
 
 
