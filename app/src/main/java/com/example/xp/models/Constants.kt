@@ -11,18 +11,23 @@ object Constants {
 
         val que1 = Question(
             1,
-            "What is the name of this player?",
-            R.drawable.ic_launcher_foreground
-            //insert drawable of player img,
-            //insert inputs of text letters which will represent buttons
+            "What is the name of this player",
+            R.drawable.scump,
+            "Ian",
+            "Seth",
+            "James",
+            "Abner"
+
         )
 
         val que2 = Question(
             2,
-            "What is this map called?",
-            R.drawable.ic_launcher_foreground
-            //insert drawable of player img,
-            //insert inputs of text letters which will represent buttons
+            "Who won the most Call of Duty Championships",
+            R.drawable.cod_que2,
+            "Scump",
+            "Clayster",
+            "Crimsix",
+            "Karma"
         )
 
         allQuestions.add(que1)

@@ -33,6 +33,9 @@ class CategoriesActivity : AppCompatActivity() {
                 val intent = Intent(this, QuestionsActivity::class.java)
                 intent.putExtra("username", username.toString())
                 startActivity(intent)
+//            binding.ivCod.setTag(0, "Call of Duty")
+
+
         }
     }
 }

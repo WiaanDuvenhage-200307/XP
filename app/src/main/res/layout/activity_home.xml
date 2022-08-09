@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="150dp"
         android:layout_height="170dp"
-        android:background="@drawable/fadelogo"/>
+        android:background="@drawable/fadelogo" />
 
     <TextView
         android:id="@+id/heading"
@@ -24,14 +24,14 @@
         android:textSize="28sp" />
 
     <TextView
+        android:id="@+id/subtext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/subtext"
-        android:text="@string/welcome_sub"
-        android:textColor="@color/white"
-        android:fontFamily="@font/ralewayregular"
         android:layout_below="@+id/heading"
-        android:paddingLeft="30sp"/>
+        android:fontFamily="@font/ralewayregular"
+        android:paddingLeft="30sp"
+        android:text="@string/welcome_sub"
+        android:textColor="@color/white" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -58,8 +58,8 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="90sp"
-        android:layout_marginLeft="20sp"
         android:layout_below="@+id/subtext"
+        android:layout_marginLeft="20sp"
         android:layout_marginTop="97dp"
         android:layout_marginRight="20sp"
         android:background="@drawable/organicshape"
@@ -74,22 +74,22 @@
             android:id="@+id/greetheading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/ralewaybold"
             android:text="@string/info"
             android:textColor="@color/black"
             android:textSize="20dp" />
 
         <TextView
+            android:id="@+id/greetsubtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/greetheading"
             android:fontFamily="@font/ralewayregular"
-            android:id="@+id/greetsubtext"
             android:text="@string/info_sub"
             android:textColor="@color/black"
-            android:textSize="14dp"
-            android:layout_below="@+id/greetheading"
-            />
+            android:textSize="14dp" />
 
     </RelativeLayout>
 
@@ -97,7 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="30sp"
-        android:hint="Enter your name"
+        android:hint="Username"
         android:layout_marginTop="350sp"
         android:id="@+id/nameInput">
 
@@ -108,6 +108,8 @@
             android:layout_below="@+id/subtext"
             android:layout_marginTop="40sp"
             android:inputType="text"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -124,11 +126,12 @@
         android:id="@+id/button"/>
 
     <ImageView
+        android:id="@+id/crowd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
         android:layout_marginTop="25sp"
-        android:src="@drawable/crowd"
-        android:layout_below="@+id/button"/>
+        android:src="@drawable/crowd" />
 
 
 

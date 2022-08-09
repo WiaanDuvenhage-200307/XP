@@ -45,15 +45,15 @@
 
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="League of Legends"
-            android:paddingLeft="30sp"
-            android:fontFamily="@font/ralewaybold"
-            android:textColor="@color/red"
-            android:textSize="22sp"
-            android:layout_marginBottom="22dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="League of Legends"
+        android:paddingLeft="30sp"
+        android:fontFamily="@font/ralewaybold"
+        android:textColor="@color/red"
+        android:textSize="22sp"
+        android:layout_marginBottom="22dp"/>
 
     <TextView
         android:id="@+id/tv_queNum"
@@ -70,13 +70,85 @@
         android:textColor="@color/white"
         android:textSize="14sp"/>
 
+    <ImageView
+        android:id="@+id/iv_que_img"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_splash"
+        android:layout_gravity="center"/>
+
     <TextView
         android:id="@+id/tv_question_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="This is the question"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:fontFamily="@font/ralewayregular"
+        android:textSize="17sp"
         android:textColor="@color/red"
         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="20dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_a1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Answer"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_a2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Answer"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="20dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_a3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Answer"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_a4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Answer"/>
+
+
+    </LinearLayout>
+
+
 
 
 
