@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import com.example.xp.databinding.ActivityCategoriesBinding
-import com.example.xp.models.Constants.getAllQuestions
+import com.example.xp.models.Constants.getCodQuestions
 import com.example.xp.models.Question
 import com.google.android.material.snackbar.Snackbar
 
@@ -32,8 +32,18 @@ class CategoriesActivity : AppCompatActivity() {
         binding.ivCod.setOnClickListener{
                 val intent = Intent(this, QuestionsActivity::class.java)
                 intent.putExtra("username", username.toString())
+                intent.putExtra("iv_cod", "Call of Duty")
                 startActivity(intent)
-//            binding.ivCod.setTag(0, "Call of Duty")
+
+
+        }
+
+        //if user clicks on League of Legends Image
+        binding.ivLol.setOnClickListener{
+            val intent = Intent(this, QuestionsActivity::class.java)
+            intent.putExtra("username", username.toString())
+            intent.putExtra("iv_lol", "League of Legends")
+            startActivity(intent)
 
 
         }

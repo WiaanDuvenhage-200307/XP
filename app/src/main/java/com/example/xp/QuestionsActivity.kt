@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.util.Log
 import com.example.xp.databinding.ActivityCategoriesBinding
 import com.example.xp.databinding.ActivityQuestionsBinding
-import com.example.xp.models.Constants.getAllQuestions
+import com.example.xp.models.Constants.getCodQuestions
+import com.example.xp.models.Constants.getLeagueQuestions
+import com.example.xp.models.Constants.getValorantQuestions
 import com.example.xp.models.Question
 
 class QuestionsActivity : AppCompatActivity() {
@@ -16,25 +18,32 @@ class QuestionsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityQuestionsBinding.inflate(layoutInflater)
+        val categoryName = intent.getStringExtra("iv_lol").toString()
 
         val username = intent.getStringExtra("username").toString()
 
-        binding.tvUsername.text = username
 
+        binding.tvUsername.text = username
+        binding.tvCategory.text = categoryName
         setContentView(binding.root)
 
         var questionNumber = intent.getIntExtra("questionNumber", 0)
 
-        val questions = getAllQuestions()
+//        val codQuestions = getCodQuestions()
+//        val csgoQuestions = getCsgoQuestions()
+//        val fortniteQuestions = getFortniteQuestions()
+//        val leagueQuestions = getLeagueQuestions()
+//        val owQuestions = getOverwatchQuestions()
+        val valQuestions = getValorantQuestions()
 
-        val currentQuestion = questions[questionNumber]
+        val currentQuestion = valQuestions[questionNumber]
 
         Log.i("Question Count: ", "${currentQuestion.questionText}")
 
-        updateUi(currentQuestion, username)
+        updateUi(currentQuestion, username, categoryName)
 
         binding.btnA4.setOnClickListener{
-            if(questionNumber + 1 == questions.count()){
+            if(questionNumber + 1 == valQuestions.count()){
                 //TODO: Navigate to Results Activity
                 val intent = Intent(this, ResultsActivity::class.java)
                 startActivity(intent)
@@ -57,7 +66,7 @@ class QuestionsActivity : AppCompatActivity() {
 
     }
 
-    fun updateUi(currentQuestion: Question, username: String){
+    fun updateUi(currentQuestion: Question, username: String, categoryName: String){
         if(currentQuestion.id == 1){
             binding.tvQuestionText.text = "${currentQuestion.questionText}"
         } else {
