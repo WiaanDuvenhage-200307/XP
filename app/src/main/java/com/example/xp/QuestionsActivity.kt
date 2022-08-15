@@ -7,7 +7,10 @@ import android.util.Log
 import com.example.xp.databinding.ActivityCategoriesBinding
 import com.example.xp.databinding.ActivityQuestionsBinding
 import com.example.xp.models.Constants.getCodQuestions
+import com.example.xp.models.Constants.getCsgoQuestions
+import com.example.xp.models.Constants.getFortniteQuestions
 import com.example.xp.models.Constants.getLeagueQuestions
+import com.example.xp.models.Constants.getOverwatchQuestions
 import com.example.xp.models.Constants.getValorantQuestions
 import com.example.xp.models.Question
 
@@ -20,6 +23,7 @@ class QuestionsActivity : AppCompatActivity() {
         binding = ActivityQuestionsBinding.inflate(layoutInflater)
         val categoryName = intent.getStringExtra("iv_lol").toString()
 
+
         val username = intent.getStringExtra("username").toString()
 
 
@@ -29,21 +33,21 @@ class QuestionsActivity : AppCompatActivity() {
 
         var questionNumber = intent.getIntExtra("questionNumber", 0)
 
-//        val codQuestions = getCodQuestions()
-//        val csgoQuestions = getCsgoQuestions()
-//        val fortniteQuestions = getFortniteQuestions()
-//        val leagueQuestions = getLeagueQuestions()
-//        val owQuestions = getOverwatchQuestions()
+        val codQuestions = getCodQuestions()
+        val csgoQuestions = getCsgoQuestions()
+        val fortniteQuestions = getFortniteQuestions()
+        val leagueQuestions = getLeagueQuestions()
+        val owQuestions = getOverwatchQuestions()
         val valQuestions = getValorantQuestions()
 
-        val currentQuestion = valQuestions[questionNumber]
+        val currentQuestion = owQuestions[questionNumber]
 
         Log.i("Question Count: ", "${currentQuestion.questionText}")
 
         updateUi(currentQuestion, username, categoryName)
 
         binding.btnA4.setOnClickListener{
-            if(questionNumber + 1 == valQuestions.count()){
+            if(questionNumber + 1 == owQuestions.count()){
                 //TODO: Navigate to Results Activity
                 val intent = Intent(this, ResultsActivity::class.java)
                 startActivity(intent)

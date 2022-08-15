@@ -69,7 +69,7 @@ object Constants {
         return allQuestions
     }
 
-    fun getcsgoQuestions(): ArrayList<Question> {
+    fun getCsgoQuestions(): ArrayList<Question> {
         var csgoQuestions = ArrayList<Question>()
 
         val que1 = Question(
