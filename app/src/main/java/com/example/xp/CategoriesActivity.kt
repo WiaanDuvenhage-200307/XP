@@ -36,7 +36,7 @@ class CategoriesActivity : AppCompatActivity() {
         binding.ivCod.setOnClickListener{
                 val intent = Intent(this, QuestionsActivity::class.java)
                 intent.putExtra("username", username.toString())
-                intent.putExtra("iv_cod", "Call of Duty")
+                intent.putExtra("catName", "Call of Duty")
                 intent.putExtra("category", "cod")
                 startActivity(intent)
 
@@ -47,7 +47,7 @@ class CategoriesActivity : AppCompatActivity() {
         binding.ivCsgo.setOnClickListener{
             val intent = Intent(this, QuestionsActivity::class.java)
             intent.putExtra("username", username.toString())
-            intent.putExtra("iv_cod", "Call of Duty")
+            intent.putExtra("catName", "Counter Strike: Global Offensive")
             intent.putExtra("category", "csgo")
             startActivity(intent)
 
@@ -58,7 +58,7 @@ class CategoriesActivity : AppCompatActivity() {
         binding.ivFortnite.setOnClickListener{
             val intent = Intent(this, QuestionsActivity::class.java)
             intent.putExtra("username", username.toString())
-            intent.putExtra("iv_cod", "Call of Duty")
+            intent.putExtra("catName", "Fortnite")
             intent.putExtra("category", "fortnite")
             startActivity(intent)
 
@@ -68,7 +68,7 @@ class CategoriesActivity : AppCompatActivity() {
         binding.ivLol.setOnClickListener{
             val intent = Intent(this, QuestionsActivity::class.java)
             intent.putExtra("username", username.toString())
-            intent.putExtra("iv_cod", "Call of Duty")
+            intent.putExtra("catName", "League of Legends")
             intent.putExtra("category", "lol")
             startActivity(intent)
 
@@ -79,7 +79,7 @@ class CategoriesActivity : AppCompatActivity() {
         binding.ivOw.setOnClickListener{
             val intent = Intent(this, QuestionsActivity::class.java)
             intent.putExtra("username", username.toString())
-            intent.putExtra("iv_cod", "Call of Duty")
+            intent.putExtra("catName", "Overwatch")
             intent.putExtra("category", "ow")
             startActivity(intent)
 
@@ -90,7 +90,7 @@ class CategoriesActivity : AppCompatActivity() {
         binding.ivValorant.setOnClickListener{
             val intent = Intent(this, QuestionsActivity::class.java)
             intent.putExtra("username", username.toString())
-            intent.putExtra("iv_cod", "Call of Duty")
+            intent.putExtra("catName", "Valorant")
             intent.putExtra("category", "valorant")
             startActivity(intent)
 

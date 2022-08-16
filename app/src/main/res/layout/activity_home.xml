@@ -98,6 +98,7 @@
         android:layout_height="wrap_content"
         android:padding="30sp"
         android:hint="Username"
+        android:textColorHint="@color/white"
         android:layout_marginTop="350sp"
         android:id="@+id/nameInput">
 
@@ -107,9 +108,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/subtext"
             android:layout_marginTop="40sp"
+            android:fontFamily="@font/ralewayregular"
             android:inputType="text"
-            android:backgroundTint="@color/black"
             android:textColor="@color/white"
+            android:background="@drawable/border"
             />
 
     </com.google.android.material.textfield.TextInputLayout>

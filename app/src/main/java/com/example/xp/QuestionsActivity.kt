@@ -21,22 +21,20 @@ class QuestionsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityQuestionsBinding.inflate(layoutInflater)
-        val categoryName = intent.getStringExtra("iv_lol").toString()
+        val categoryName = intent.getStringExtra("catName").toString()
         val selectedCategory = intent.getStringExtra("category").toString()
         var score = intent.getIntExtra("score", 0)
 
-
         val username = intent.getStringExtra("username").toString()
-
-
-
 
         binding.tvUsername.text = username
         binding.tvCategory.text = categoryName
         setContentView(binding.root)
 
         if(selectedCategory == "cod"){
+            //pass Call of Duty questions
             val questions = getCodQuestions()
+            //set questions to first question
             var questionNumber = intent.getIntExtra("questionNumber", 0)
             val currentQuestion = questions[questionNumber]
             updateUi(currentQuestion, username)
@@ -55,6 +53,7 @@ class QuestionsActivity : AppCompatActivity() {
                     val intent = Intent(this, QuestionsActivity::class.java)
                     //pass username and next question value
                     intent.putExtra("username", username)
+                    intent.putExtra("catName", categoryName)
                     intent.putExtra("category", selectedCategory)
                     intent.putExtra("questionNumber", questionNumber + 1)
                     //TODO: pass score
@@ -84,6 +83,7 @@ class QuestionsActivity : AppCompatActivity() {
                     val intent = Intent(this, QuestionsActivity::class.java)
                     //pass username and next question value
                     intent.putExtra("username", username)
+                    intent.putExtra("catName", categoryName)
                     intent.putExtra("category", selectedCategory)
                     intent.putExtra("questionNumber", questionNumber + 1)
                     //TODO: pass score
@@ -113,6 +113,7 @@ class QuestionsActivity : AppCompatActivity() {
                     val intent = Intent(this, QuestionsActivity::class.java)
                     //pass username and next question value
                     intent.putExtra("username", username)
+                    intent.putExtra("catName", categoryName)
                     intent.putExtra("category", selectedCategory)
                     intent.putExtra("questionNumber", questionNumber + 1)
                     //TODO: pass score
@@ -142,6 +143,7 @@ class QuestionsActivity : AppCompatActivity() {
                     val intent = Intent(this, QuestionsActivity::class.java)
                     //pass username and next question value
                     intent.putExtra("username", username)
+                    intent.putExtra("catName", categoryName)
                     intent.putExtra("category", selectedCategory)
                     intent.putExtra("questionNumber", questionNumber + 1)
                     //TODO: pass score
@@ -171,6 +173,7 @@ class QuestionsActivity : AppCompatActivity() {
                     val intent = Intent(this, QuestionsActivity::class.java)
                     //pass username and next question value
                     intent.putExtra("username", username)
+                    intent.putExtra("catName", categoryName)
                     intent.putExtra("category", selectedCategory)
                     intent.putExtra("questionNumber", questionNumber + 1)
                     //TODO: pass score
@@ -201,6 +204,7 @@ class QuestionsActivity : AppCompatActivity() {
                     val intent = Intent(this, QuestionsActivity::class.java)
                     //pass username and next question value
                     intent.putExtra("username", username)
+                    intent.putExtra("catName", categoryName)
                     intent.putExtra("category", selectedCategory)
                     intent.putExtra("questionNumber", questionNumber + 1)
                     //TODO: pass score
