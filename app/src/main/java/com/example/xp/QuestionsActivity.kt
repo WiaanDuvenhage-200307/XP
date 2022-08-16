@@ -22,55 +22,203 @@ class QuestionsActivity : AppCompatActivity() {
 
         binding = ActivityQuestionsBinding.inflate(layoutInflater)
         val categoryName = intent.getStringExtra("iv_lol").toString()
+        val selectedCategory = intent.getStringExtra("category").toString()
+        var score = intent.getIntExtra("score", 0)
 
 
         val username = intent.getStringExtra("username").toString()
+
+
 
 
         binding.tvUsername.text = username
         binding.tvCategory.text = categoryName
         setContentView(binding.root)
 
-        var questionNumber = intent.getIntExtra("questionNumber", 0)
+        if(selectedCategory == "cod"){
+            val questions = getCodQuestions()
+            var questionNumber = intent.getIntExtra("questionNumber", 0)
+            val currentQuestion = questions[questionNumber]
+            updateUi(currentQuestion, username)
 
-        val codQuestions = getCodQuestions()
-        val csgoQuestions = getCsgoQuestions()
-        val fortniteQuestions = getFortniteQuestions()
-        val leagueQuestions = getLeagueQuestions()
-        val owQuestions = getOverwatchQuestions()
-        val valQuestions = getValorantQuestions()
+            binding.btnA4.setOnClickListener{
+                if(questionNumber + 1 == questions.count()){
+                    //TODO: Navigate to Results Activity
+                    val intent = Intent(this, ResultsActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    questions
+                    //Navigate to next question
 
-        val currentQuestion = owQuestions[questionNumber]
+                    //TODO: Capture the answered question (validation)
+                    val intent = Intent(this, QuestionsActivity::class.java)
+                    //pass username and next question value
+                    intent.putExtra("username", username)
+                    intent.putExtra("category", selectedCategory)
+                    intent.putExtra("questionNumber", questionNumber + 1)
+                    //TODO: pass score
 
-        Log.i("Question Count: ", "${currentQuestion.questionText}")
-
-        updateUi(currentQuestion, username, categoryName)
-
-        binding.btnA4.setOnClickListener{
-            if(questionNumber + 1 == owQuestions.count()){
-                //TODO: Navigate to Results Activity
-                val intent = Intent(this, ResultsActivity::class.java)
-                startActivity(intent)
-                finish()
-            } else {
-                //Navigate to next question
-
-                //TODO: Capture the answered question (validation)
-                val intent = Intent(this, QuestionsActivity::class.java)
-                //pass username and next question value
-                intent.putExtra("username", username)
-                intent.putExtra("questionNumber", questionNumber + 1)
-                //TODO: pass score
-
-                startActivity(intent)
-                finish()
+                    startActivity(intent)
+                    finish()
+                }
             }
+
+        } else if (selectedCategory == "csgo"){
+            val questions = getCsgoQuestions()
+            var questionNumber = intent.getIntExtra("questionNumber", 0)
+            val currentQuestion = questions[questionNumber]
+            updateUi(currentQuestion, username)
+
+            binding.btnA4.setOnClickListener{
+                if(questionNumber + 1 == questions.count()){
+                    //TODO: Navigate to Results Activity
+                    val intent = Intent(this, ResultsActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    questions
+                    //Navigate to next question
+
+                    //TODO: Capture the answered question (validation)
+                    val intent = Intent(this, QuestionsActivity::class.java)
+                    //pass username and next question value
+                    intent.putExtra("username", username)
+                    intent.putExtra("category", selectedCategory)
+                    intent.putExtra("questionNumber", questionNumber + 1)
+                    //TODO: pass score
+
+                    startActivity(intent)
+                    finish()
+                }
+            }
+
+        } else if (selectedCategory == "fortnite"){
+            val questions = getFortniteQuestions()
+            var questionNumber = intent.getIntExtra("questionNumber", 0)
+            val currentQuestion = questions[questionNumber]
+            updateUi(currentQuestion, username)
+
+            binding.btnA4.setOnClickListener{
+                if(questionNumber + 1 == questions.count()){
+                    //TODO: Navigate to Results Activity
+                    val intent = Intent(this, ResultsActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    questions
+                    //Navigate to next question
+
+                    //TODO: Capture the answered question (validation)
+                    val intent = Intent(this, QuestionsActivity::class.java)
+                    //pass username and next question value
+                    intent.putExtra("username", username)
+                    intent.putExtra("category", selectedCategory)
+                    intent.putExtra("questionNumber", questionNumber + 1)
+                    //TODO: pass score
+
+                    startActivity(intent)
+                    finish()
+                }
+            }
+
+        } else if (selectedCategory == "lol"){
+            val questions = getLeagueQuestions()
+            var questionNumber = intent.getIntExtra("questionNumber", 0)
+            val currentQuestion = questions[questionNumber]
+            updateUi(currentQuestion, username)
+
+            binding.btnA4.setOnClickListener{
+                if(questionNumber + 1 == questions.count()){
+                    //TODO: Navigate to Results Activity
+                    val intent = Intent(this, ResultsActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    questions
+                    //Navigate to next question
+
+                    //TODO: Capture the answered question (validation)
+                    val intent = Intent(this, QuestionsActivity::class.java)
+                    //pass username and next question value
+                    intent.putExtra("username", username)
+                    intent.putExtra("category", selectedCategory)
+                    intent.putExtra("questionNumber", questionNumber + 1)
+                    //TODO: pass score
+
+                    startActivity(intent)
+                    finish()
+                }
+            }
+
+        } else if (selectedCategory == "ow"){
+            val questions = getOverwatchQuestions()
+            var questionNumber = intent.getIntExtra("questionNumber", 0)
+            val currentQuestion = questions[questionNumber]
+            updateUi(currentQuestion, username)
+
+            binding.btnA4.setOnClickListener{
+                if(questionNumber + 1 == questions.count()){
+                    //TODO: Navigate to Results Activity
+                    val intent = Intent(this, ResultsActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    questions
+                    //Navigate to next question
+
+                    //TODO: Capture the answered question (validation)
+                    val intent = Intent(this, QuestionsActivity::class.java)
+                    //pass username and next question value
+                    intent.putExtra("username", username)
+                    intent.putExtra("category", selectedCategory)
+                    intent.putExtra("questionNumber", questionNumber + 1)
+                    //TODO: pass score
+
+                    startActivity(intent)
+                    finish()
+                }
+            }
+
+        } else {
+            selectedCategory == "val"
+            val questions = getValorantQuestions()
+            var questionNumber = intent.getIntExtra("questionNumber", 0)
+            val currentQuestion = questions[questionNumber]
+            updateUi(currentQuestion, username)
+
+            binding.btnA4.setOnClickListener{
+                if(questionNumber + 1 == questions.count()){
+                    //TODO: Navigate to Results Activity
+                    val intent = Intent(this, ResultsActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    questions
+                    //Navigate to next question
+
+                    //TODO: Capture the answered question (validation)
+                    val intent = Intent(this, QuestionsActivity::class.java)
+                    //pass username and next question value
+                    intent.putExtra("username", username)
+                    intent.putExtra("category", selectedCategory)
+                    intent.putExtra("questionNumber", questionNumber + 1)
+                    //TODO: pass score
+
+                    startActivity(intent)
+                    finish()
+                }
+            }
+
         }
+
+
+
 
 
     }
 
-    fun updateUi(currentQuestion: Question, username: String, categoryName: String){
+    fun updateUi(currentQuestion: Question, username: String){
         if(currentQuestion.id == 1){
             binding.tvQuestionText.text = "${currentQuestion.questionText}"
         } else {
