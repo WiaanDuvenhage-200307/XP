@@ -21,10 +21,45 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="23"
+        android:text="5"
         android:gravity="center"
         android:fontFamily="@font/ralewaybold"
         android:textColor="@color/black"
         android:textSize="144sp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/illustration"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ralewaybold"
+        android:text="Poggers!"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ralewayregular"
+        android:text="You have beaten the high score"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textAlignment="center"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:padding="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="Start Over"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/black"
+        android:textAllCaps="false"
+        android:fontFamily="@font/ralewayregular"
+        android:layout_marginTop="20dp"/>
 
 </LinearLayout>

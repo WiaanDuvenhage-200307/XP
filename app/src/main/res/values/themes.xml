@@ -4,14 +4,14 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/red</item>
         <item name="colorPrimaryVariant">@color/red_tint</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/black</item>
-        <item name="colorSecondaryVariant">@color/black_light</item>
-        <item name="colorOnSecondary">@color/red</item>
+        <item name="colorSecondary">@color/red</item>
+        <item name="colorSecondaryVariant">@color/red</item>
+        <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
         <item name="android:textColorHint">@color/white</item>
+        <!-- Customize your theme here. -->
     </style>
 </resources>
