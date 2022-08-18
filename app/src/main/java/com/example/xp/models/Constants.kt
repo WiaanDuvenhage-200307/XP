@@ -16,7 +16,8 @@ object Constants {
             "Ian",
             "Seth",
             "James",
-            "Abner"
+            "Abner",
+            "Seth"
 
         )
 
@@ -27,7 +28,8 @@ object Constants {
             "Scump",
             "Clayster",
             "Crimsix",
-            "Formal"
+            "Formal",
+            "Crimsix"
         )
 
         val que3 = Question(
@@ -37,7 +39,8 @@ object Constants {
             "Optic Gaming",
             "EUnited",
             "FaZe Clan",
-            "Splyce Gaming"
+            "Splyce Gaming",
+            "EUnited"
         )
 
         val que4 = Question(
@@ -47,7 +50,8 @@ object Constants {
             "2003",
             "2007",
             "2010",
-            "2005"
+            "2005",
+            "2003"
         )
 
         val que5 = Question(
@@ -57,6 +61,7 @@ object Constants {
             "Black Ops",
             "World At War",
             "Infinite Warfare",
+            "Advanced Warfare",
             "Advanced Warfare"
         )
 
@@ -80,7 +85,8 @@ object Constants {
             "Astralis",
             "FaZe Clan",
             "Na`Vi",
-            "EnVyUs"
+            "EnVyUs",
+            "Astralis"
         )
 
         val que2 = Question(
@@ -91,7 +97,8 @@ object Constants {
             "16 000",
             "12 000",
             "24 000",
-            "18 000"
+            "18 000",
+            "16 000"
         )
 
         val que3 = Question(
@@ -102,7 +109,8 @@ object Constants {
             "dupreeh",
             "s1mple",
             "Twistzz",
-            "Xyp9x"
+            "Xyp9x",
+            "dupreeh"
         )
 
         val que4 = Question(
@@ -113,7 +121,9 @@ object Constants {
             "CS 1.6",
             "CS Source",
             "CS:GO",
-            "CS"
+            "CS",
+            "CS Source"
+
         )
 
         val que5 = Question(
@@ -124,7 +134,8 @@ object Constants {
             "175 000",
             "120 000",
             "200 000",
-            "125 000"
+            "125 000",
+            "175 000"
         )
 
         csgoQuestions.add(que1)
@@ -147,7 +158,8 @@ object Constants {
             "Bugha",
             "Tfue",
             "Cloakzy",
-            "Clix"
+            "Clix",
+            "Bugha"
         )
 
         val que2 = Question(
@@ -158,7 +170,8 @@ object Constants {
             "$30 Million",
             "$2 Million",
             "$25 Million",
-            "$10 Million"
+            "$10 Million",
+            "$30 Million"
         )
 
         val que3 = Question(
@@ -169,7 +182,8 @@ object Constants {
             "Faze Clan",
             "NRG",
             "Team Liquid",
-            "Misfits Gaming"
+            "Misfits Gaming",
+            "FaZe Clan"
         )
 
         val que4 = Question(
@@ -180,7 +194,8 @@ object Constants {
             "Aim",
             "Building",
             "Macros",
-            "Movement"
+            "Movement",
+            "Aim"
         )
 
         val que5 = Question(
@@ -191,7 +206,8 @@ object Constants {
             "July 2017",
             "September 2017",
             "August 2017",
-            "June 2017"
+            "June 2017",
+            "July 2017"
         )
 
         fortniteQuestions.add(que1)
@@ -214,7 +230,8 @@ object Constants {
             "2009",
             "2008",
             "2011",
-            "2013"
+            "2013",
+            "2009"
         )
 
         val que2 = Question(
@@ -225,7 +242,8 @@ object Constants {
             "Busan",
             "Seoul",
             "Daejon",
-            "Incheon"
+            "Incheon",
+            "Seoul"
         )
 
         val que3 = Question(
@@ -236,7 +254,8 @@ object Constants {
             "Caps",
             "Faker",
             "Bjergsen",
-            "Uzi"
+            "Uzi",
+            "Faker"
         )
 
         val que4 = Question(
@@ -244,10 +263,12 @@ object Constants {
             "How far did Cloud9 progress at Worlds 2018?",
             //insert image for question,
             R.drawable.lol_que4,
-            "2009",
-            "2008",
-            "2011",
-            "2013"
+            "Quarters",
+            "Semi's",
+            "Knockout",
+            "Final",
+            "Semi's"
+
         )
 
         val que5 = Question(
@@ -258,7 +279,8 @@ object Constants {
             "Uzi",
             "Faker",
             "Bengi",
-            "Showmaker"
+            "Showmaker",
+            "Faker"
         )
 
         leagueQuestions.add(que1)
@@ -281,7 +303,8 @@ object Constants {
             "Dafran",
             "Sinatraa",
             "xQc",
-            "Provide"
+            "Provide",
+            "xQc"
         )
 
         val que2 = Question(
@@ -292,7 +315,8 @@ object Constants {
             "8.5",
             "5.5",
             "7",
-            "5.42"
+            "5.42",
+            "5.5"
         )
 
         val que3 = Question(
@@ -303,7 +327,8 @@ object Constants {
             "Boston Uprising",
             "SF Shock",
             "Dallas Fuel",
-            "LA Gladiators"
+            "LA Gladiators",
+            "Dallas Fuel"
         )
 
         val que4 = Question(
@@ -314,7 +339,8 @@ object Constants {
             "Soldier: 76",
             "Widowmaker",
             "Tracer",
-            "Doomfist"
+            "Doomfist",
+            "Tracer"
         )
 
         val que5 = Question(
@@ -325,7 +351,8 @@ object Constants {
             "Activision",
             "Blizzard",
             "EA",
-            "Ubisoft"
+            "Ubisoft",
+            "Blizzard"
         )
 
         overwatchQuestions.add(que1)
@@ -348,7 +375,8 @@ object Constants {
             "CLG Red",
             "Sentinels",
             "Dignitas",
-            "Acend"
+            "Acend",
+            "Sentinels"
         )
 
         val que2 = Question(
@@ -359,7 +387,8 @@ object Constants {
             "15",
             "13",
             "10",
-            "18"
+            "18",
+            "13"
         )
 
         val que3 = Question(
@@ -370,7 +399,8 @@ object Constants {
             "Sentinels",
             "Team Liquid",
             "Team Envy",
-            "Cloud9"
+            "Cloud9",
+            "Team Envy"
         )
 
         val que4 = Question(
@@ -381,7 +411,8 @@ object Constants {
             "100 Thieves",
             "Sentinels",
             "The Guard",
-            "Team Liquid"
+            "Team Liquid",
+            "100 Thieves"
         )
 
         val que5 = Question(
@@ -389,10 +420,12 @@ object Constants {
             "What is the most used gun?",
             //insert image for question,
             R.drawable.val_que5,
-            "Vandal",
-            "Phantom",
             "Operator",
-            "Stinger"
+            "Phantom",
+            "Stinger",
+            "Vandal",
+            "Vandal"
+
         )
 
         valorantQuestions.add(que1)

@@ -8,6 +8,7 @@ data class Question (
     val answerOne: String,
     val answerTwo: String,
     val answerThree: String,
-    val answerFour: String
+    val answerFour: String,
+    val correctAnswer: String
 )
 

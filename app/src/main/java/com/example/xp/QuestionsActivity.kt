@@ -48,7 +48,6 @@ class QuestionsActivity : AppCompatActivity() {
                 } else {
                     questions
                     //Navigate to next question
-
                     //TODO: Capture the answered question (validation)
                     val intent = Intent(this, QuestionsActivity::class.java)
                     //pass username and next question value
