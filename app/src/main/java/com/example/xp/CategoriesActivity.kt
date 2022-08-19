@@ -38,6 +38,12 @@ class CategoriesActivity : AppCompatActivity() {
 
         binding.tvUsername.text = username
 
+        binding.btnChangeName.setOnClickListener{
+            val intent = Intent(this, HomeActivity::class.java)
+            intent.putExtra("username", username.toString())
+            startActivity(intent)
+        }
+
         //if the user clicks on the Call of Duty Image
         binding.ivCod.setOnClickListener{
                 val intent = Intent(this, QuestionsActivity::class.java)

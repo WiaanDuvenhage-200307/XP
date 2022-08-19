@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Window
 import android.view.WindowManager
+import android.widget.Button
 import com.example.xp.databinding.ActivityCategoriesBinding
 import com.example.xp.databinding.ActivityQuestionsBinding
 import com.example.xp.models.Constants.getCodQuestions
@@ -15,6 +16,7 @@ import com.example.xp.models.Constants.getLeagueQuestions
 import com.example.xp.models.Constants.getOverwatchQuestions
 import com.example.xp.models.Constants.getValorantQuestions
 import com.example.xp.models.Question
+import com.google.android.material.button.MaterialButton
 
 class QuestionsActivity : AppCompatActivity() {
 
@@ -42,31 +44,47 @@ class QuestionsActivity : AppCompatActivity() {
             val questions = getCodQuestions()
             //set questions to first question
             var questionNumber = intent.getIntExtra("questionNumber", 0)
+
+            //get index of current question
             val currentQuestion = questions[questionNumber]
+
+            //Set score to the frontend
+            binding.btnScore.text = score.toString()
+
+            //show question number in questions view
+            binding.tvQueNum.text = "Question ${currentQuestion.id}"
+
             updateUi(currentQuestion, username)
 
-            binding.btnA4.setOnClickListener{
-                if(questionNumber + 1 == questions.count()){
-                    //TODO: Navigate to Results Activity
-                    val intent = Intent(this, ResultsActivity::class.java)
-                    intent.putExtra("username", username)
-                    startActivity(intent)
-                    finish()
-                } else {
-                    questions
-                    //Navigate to next question
-                    //TODO: Capture the answered question (validation)
-                    val intent = Intent(this, QuestionsActivity::class.java)
-                    //pass username and next question value
-                    intent.putExtra("username", username)
-                    intent.putExtra("catName", categoryName)
-                    intent.putExtra("category", selectedCategory)
-                    intent.putExtra("questionNumber", questionNumber + 1)
-                    //TODO: pass score
+            var bg = binding.btnGroup
 
-                    startActivity(intent)
-                    finish()
-                }
+
+            binding.a4.setOnClickListener{
+
+
+
+//                Log.i("!selected answer: ", userAnswer)
+//                if(questionNumber + 1 == questions.count()){
+//                    //TODO: Navigate to Results Activity
+//                    val intent = Intent(this, ResultsActivity::class.java)
+//                    intent.putExtra("username", username)
+//                    startActivity(intent)
+//                    finish()
+//                } else {
+//                    questions
+//                    //Navigate to next question
+//                    //TODO: Capture the answered question (validation)
+//                    val intent = Intent(this, QuestionsActivity::class.java)
+//                    //pass username and next question value
+//                    intent.putExtra("username", username)
+//                    intent.putExtra("catName", categoryName)
+//                    intent.putExtra("category", selectedCategory)
+//                    intent.putExtra("questionNumber", questionNumber + 1)
+//                    //TODO: pass score
+//
+//                    startActivity(intent)
+//                    finish()
+//                }
             }
 
         } else if (selectedCategory == "csgo"){
@@ -75,10 +93,11 @@ class QuestionsActivity : AppCompatActivity() {
             val currentQuestion = questions[questionNumber]
             updateUi(currentQuestion, username)
 
-            binding.btnA4.setOnClickListener{
+            binding.a4.setOnClickListener{
                 if(questionNumber + 1 == questions.count()){
                     //TODO: Navigate to Results Activity
                     val intent = Intent(this, ResultsActivity::class.java)
+                    intent.putExtra("username", username)
                     startActivity(intent)
                     finish()
                 } else {
@@ -105,10 +124,11 @@ class QuestionsActivity : AppCompatActivity() {
             val currentQuestion = questions[questionNumber]
             updateUi(currentQuestion, username)
 
-            binding.btnA4.setOnClickListener{
+            binding.a4.setOnClickListener{
                 if(questionNumber + 1 == questions.count()){
                     //TODO: Navigate to Results Activity
                     val intent = Intent(this, ResultsActivity::class.java)
+                    intent.putExtra("username", username)
                     startActivity(intent)
                     finish()
                 } else {
@@ -135,10 +155,11 @@ class QuestionsActivity : AppCompatActivity() {
             val currentQuestion = questions[questionNumber]
             updateUi(currentQuestion, username)
 
-            binding.btnA4.setOnClickListener{
+            binding.a4.setOnClickListener{
                 if(questionNumber + 1 == questions.count()){
                     //TODO: Navigate to Results Activity
                     val intent = Intent(this, ResultsActivity::class.java)
+                    intent.putExtra("username", username)
                     startActivity(intent)
                     finish()
                 } else {
@@ -165,10 +186,11 @@ class QuestionsActivity : AppCompatActivity() {
             val currentQuestion = questions[questionNumber]
             updateUi(currentQuestion, username)
 
-            binding.btnA4.setOnClickListener{
+            binding.a4.setOnClickListener{
                 if(questionNumber + 1 == questions.count()){
                     //TODO: Navigate to Results Activity
                     val intent = Intent(this, ResultsActivity::class.java)
+                    intent.putExtra("username", username)
                     startActivity(intent)
                     finish()
                 } else {
@@ -196,10 +218,11 @@ class QuestionsActivity : AppCompatActivity() {
             val currentQuestion = questions[questionNumber]
             updateUi(currentQuestion, username)
 
-            binding.btnA4.setOnClickListener{
+            binding.a4.setOnClickListener{
                 if(questionNumber + 1 == questions.count()){
                     //TODO: Navigate to Results Activity
                     val intent = Intent(this, ResultsActivity::class.java)
+                    intent.putExtra("username", username)
                     startActivity(intent)
                     finish()
                 } else {
@@ -235,10 +258,10 @@ class QuestionsActivity : AppCompatActivity() {
             binding.tvQuestionText.text = "${currentQuestion.questionText}"
         }
 
-        binding.btnA1.text = currentQuestion.answerOne
-        binding.btnA2.text = currentQuestion.answerTwo
-        binding.btnA3.text = currentQuestion.answerThree
-        binding.btnA4.text = currentQuestion.answerFour
+        binding.a1.text = currentQuestion.answerOne
+        binding.a2.text = currentQuestion.answerTwo
+        binding.a3.text = currentQuestion.answerThree
+        binding.a4.text = currentQuestion.answerFour
         binding.ivQueImg.setImageResource(currentQuestion.img)
     }
 }

@@ -27,8 +27,6 @@
             android:orientation="horizontal"
             android:layout_marginBottom="5dp">
 
-
-
             <TextView
                 android:id="@+id/tv_username"
                 android:layout_width="wrap_content"
@@ -40,7 +38,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:paddingLeft="30dp"
-                android:paddingTop="20dp"/>
+                android:paddingTop="20dp"
+                android:layout_marginRight="10dp"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_score"
@@ -100,16 +99,14 @@
         android:textColor="@color/white"
         />
 
-    <LinearLayout
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/btn_group"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        android:paddingTop="20dp">
+        android:layout_height="wrap_content">
+
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_a1"
+            android:id="@+id/a1"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_weight="0.5"
@@ -124,7 +121,7 @@
 
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_a2"
+            android:id="@+id/a2"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_weight="0.5"
@@ -132,19 +129,8 @@
             android:textAllCaps="false"
             android:fontFamily="@font/ralewayregular"/>
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp">
-
-
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_a3"
+            android:id="@+id/a3"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_weight="0.5"
@@ -159,7 +145,7 @@
 
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_a4"
+            android:id="@+id/a4"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_weight="0.5"
@@ -167,8 +153,9 @@
             android:textAllCaps="false"
             android:fontFamily="@font/ralewayregular"/>
 
+    </com.google.android.material.button.MaterialButtonToggleGroup>
 
-    </LinearLayout>
+
 
 
 
