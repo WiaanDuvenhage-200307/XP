@@ -127,14 +127,6 @@
         android:textColor="@color/black"
         android:id="@+id/button"/>
 
-    <ImageView
-        android:id="@+id/crowd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button"
-        android:layout_marginTop="25sp"
-        android:src="@drawable/crowd" />
-
 
 
 </RelativeLayout>

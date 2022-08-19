@@ -61,8 +61,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
         android:src="@drawable/cod"
         android:tag="Call of Duty"
+        app:layout_constraintEnd_toStartOf="@+id/iv_csgo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_subheading" />
 
@@ -70,7 +72,7 @@
         android:id="@+id/iv_csgo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="60dp"
         android:src="@drawable/csgo"
         app:layout_constraintStart_toEndOf="@+id/iv_cod"
@@ -83,6 +85,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="60dp"
         android:src="@drawable/fortnite"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_csgo"
         app:layout_constraintTop_toBottomOf="@+id/tv_subheading" />
 
@@ -90,7 +93,7 @@
         android:id="@+id/iv_lol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/league"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_cod" />
@@ -99,8 +102,8 @@
         android:id="@+id/iv_ow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/ow"
         app:layout_constraintStart_toEndOf="@+id/iv_lol"
         app:layout_constraintTop_toBottomOf="@+id/iv_csgo" />
@@ -110,8 +113,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/valorant"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_ow"
         app:layout_constraintTop_toBottomOf="@+id/iv_fortnite" />
 

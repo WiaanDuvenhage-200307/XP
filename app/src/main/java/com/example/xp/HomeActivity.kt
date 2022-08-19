@@ -3,6 +3,8 @@ package com.example.xp
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Window
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.example.xp.databinding.ActivityHomeBinding
 import com.google.android.material.snackbar.Snackbar
@@ -14,9 +16,14 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //Make Application Fullscree
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root) //this sets what XML frontend to use
-//        var actionBar = supportActionbar?.hide()
+
 
         binding.button.setOnClickListener{
 
@@ -36,6 +43,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
 
+        //Lets user navigate to the settings page
         binding.btnSettings.setOnClickListener{
             val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)

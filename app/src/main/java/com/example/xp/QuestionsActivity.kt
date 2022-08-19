@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Window
+import android.view.WindowManager
 import com.example.xp.databinding.ActivityCategoriesBinding
 import com.example.xp.databinding.ActivityQuestionsBinding
 import com.example.xp.models.Constants.getCodQuestions
@@ -19,6 +21,10 @@ class QuestionsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityQuestionsBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //Make Application Fullscree
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         binding = ActivityQuestionsBinding.inflate(layoutInflater)
         val categoryName = intent.getStringExtra("catName").toString()
@@ -43,6 +49,7 @@ class QuestionsActivity : AppCompatActivity() {
                 if(questionNumber + 1 == questions.count()){
                     //TODO: Navigate to Results Activity
                     val intent = Intent(this, ResultsActivity::class.java)
+                    intent.putExtra("username", username)
                     startActivity(intent)
                     finish()
                 } else {
