@@ -12,6 +12,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.example.xp.databinding.ActivityCategoriesBinding
+import com.example.xp.databinding.ActivityDialogBinding
 import com.example.xp.models.Constants
 import com.example.xp.models.Constants.getCodQuestions
 import com.example.xp.models.Constants.getCsgoQuestions
@@ -26,6 +27,7 @@ class CategoriesActivity : AppCompatActivity() {
     lateinit var dataReceive: TextView
 
     private lateinit var binding: ActivityCategoriesBinding
+    private lateinit var binding2: ActivityDialogBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +40,7 @@ class CategoriesActivity : AppCompatActivity() {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         binding = ActivityCategoriesBinding.inflate(layoutInflater)
+        binding2 = ActivityDialogBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         dataReceive = findViewById(R.id.tv_username)
@@ -147,7 +150,9 @@ class CategoriesActivity : AppCompatActivity() {
                 apply() //to end
             }
 
-            findViewById<TextView>(R.id.tv_user).text = username
+            binding2.tvUser.text = username
+            Log.i("!!!The User: ", binding2.tvUser.text.toString())
+            binding2.tvUserHighScore.text = prevScore
 //            findViewById<TextView>(R.id.tv_userHighScore).text = userHighScore
 
         }
