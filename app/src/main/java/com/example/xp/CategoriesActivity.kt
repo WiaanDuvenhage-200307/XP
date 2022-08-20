@@ -30,6 +30,9 @@ class CategoriesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val prevScore = intent.getStringExtra("finalScore").toString()
+        Log.i("prevScore", prevScore)
+
         //Make Application Fullscree
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
@@ -46,8 +49,6 @@ class CategoriesActivity : AppCompatActivity() {
 
         val username = intent.getStringExtra("username").toString()
 
-        var highScore: String = ""
-
         binding.tvUsername.text = username
 
         binding.btnChangeName.setOnClickListener{
@@ -63,8 +64,6 @@ class CategoriesActivity : AppCompatActivity() {
                 intent.putExtra("catName", "Call of Duty")
                 intent.putExtra("category", "cod")
                 startActivity(intent)
-
-
         }
 
         //if user clicks on League of Legends Image
@@ -121,11 +120,10 @@ class CategoriesActivity : AppCompatActivity() {
 
         }
 
-
-
         binding.btnHighScore.setOnClickListener {
-            //TODO: Show Popup modal of current High Score
-            val view = View.inflate(this@CategoriesActivity, R.layout.activity_dialog, null)
+
+
+            val view = View.inflate(this, R.layout.activity_dialog, null)
 
             val builder = AlertDialog.Builder(this)
             //sets the view to this dialog xml file
@@ -140,6 +138,18 @@ class CategoriesActivity : AppCompatActivity() {
             view.findViewById<Button>(R.id.btn_confirm).setOnClickListener{
                 dialog.dismiss()
             }
+
+            editor.apply{
+                putString(Constants.USER_NAME, username)
+                putString(Constants.HIGH_SCORE, prevScore)
+                Log.i("!!!TEST:  ", username)
+                Log.i("!!!Saved Score: ", prevScore)
+                apply() //to end
+            }
+
+            findViewById<TextView>(R.id.tv_user).text = username
+//            findViewById<TextView>(R.id.tv_userHighScore).text = userHighScore
+
         }
     }
 }

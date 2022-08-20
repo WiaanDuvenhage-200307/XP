@@ -31,6 +31,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tv_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -44,6 +45,7 @@
             android:textSize="20sp"
             android:textStyle="bold" />
         <TextView
+            android:id="@+id/tv_userHighScore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"

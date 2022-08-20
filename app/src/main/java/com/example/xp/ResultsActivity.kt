@@ -30,6 +30,8 @@ class ResultsActivity : AppCompatActivity() {
 
         val score = intent.getStringExtra("score").toString()
 
+
+
         if(score.toInt() != 5){
             binding.ivHighScore.setImageResource(0)
             binding.tvResultHead.text = "Oof!"
@@ -37,15 +39,19 @@ class ResultsActivity : AppCompatActivity() {
         }else{
             binding.tvResultHead.text = "Poggers!"
             binding.tvResultSub.text = "You have set the new high score!"
+            intent.putExtra("finalScore", score)
         }
 
         binding.tvScore.text = score
+
+
 
         binding.btnRestart.setOnClickListener{
 
             val intent = Intent(this, CategoriesActivity::class.java)
             //sends the username back to the categories view to be accessible
             intent.putExtra("username", username)
+            intent.putExtra("finalScore", score)
             startActivity(intent)
         }
     }
