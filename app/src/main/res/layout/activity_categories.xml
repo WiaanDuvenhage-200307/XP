@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".CategoriesActivity"
@@ -7,140 +7,192 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/ic_activity_bg"
-    android:padding="30dp">
+    android:padding="30dp"
+    android:scrollbars="none">
 
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/ralewayregular"
-        android:text="Hello, "
-        android:textColor="@color/red"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:id="@+id/tv_username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/ralewaybold"
-        android:text="Name"
-        android:textColor="@color/red"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_changeName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Change Name"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_heading"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:fontFamily="@font/ralewaybold"
-        android:text="Choose a category"
-        android:textColor="@color/red"
-        android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@+id/tv_username"
-        tools:layout_editor_absoluteX="16dp" />
-
-    <TextView
-        android:id="@+id/tv_subheading"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/ralewayregular"
-        android:text="Tap an image below"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/tv_heading"
-        tools:layout_editor_absoluteX="30dp" />
-
-    <ImageView
-        android:id="@+id/iv_cod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="20dp"
-        android:src="@drawable/cod"
-        android:tag="Call of Duty"
-        app:layout_constraintEnd_toStartOf="@+id/iv_csgo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_subheading" />
-
-    <ImageView
-        android:id="@+id/iv_csgo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/csgo"
-        app:layout_constraintStart_toEndOf="@+id/iv_cod"
-        app:layout_constraintTop_toBottomOf="@+id/tv_subheading" />
-
-    <ImageView
-        android:id="@+id/iv_fortnite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/fortnite"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/iv_csgo"
-        app:layout_constraintTop_toBottomOf="@+id/tv_subheading" />
-
-    <ImageView
-        android:id="@+id/iv_lol"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/league"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_cod" />
-
-    <ImageView
-        android:id="@+id/iv_ow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/ow"
-        app:layout_constraintStart_toEndOf="@+id/iv_lol"
-        app:layout_constraintTop_toBottomOf="@+id/iv_csgo" />
-
-    <ImageView
-        android:id="@+id/iv_valorant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/valorant"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/iv_ow"
-        app:layout_constraintTop_toBottomOf="@+id/iv_fortnite" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_random_category"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:padding="18sp"
-        android:fontFamily="@font/ralewayregular"
-        android:text="Random Category"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_lol"/>
+        android:orientation="vertical">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ralewayregular"
+            android:text="Hello, "
+            android:textColor="@color/red"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ralewaybold"
+            android:text="Name"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_changeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Name"
+            android:textAllCaps="false"/>
+
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/ralewaybold"
+            android:text="Choose a category"
+            android:textColor="@color/red"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_username"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/tv_subheading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ralewayregular"
+            android:text="Tap an image below to start"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_heading"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subheading">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="50dp">
+
+                <ImageView
+                    android:id="@+id/iv_cod"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/cod"
+                    android:tag="Call of Duty"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/iv_csgo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/csgo"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="50dp">
+
+                <ImageView
+                    android:id="@+id/iv_fortnite"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/fortnite"
+                    android:tag="Call of Duty"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/iv_lol"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/league"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="50dp">
+
+                <ImageView
+                    android:id="@+id/iv_ow"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/ow"
+                    android:tag="Call of Duty"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/iv_valorant"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/valorant"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_random_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="18sp"
+            android:fontFamily="@font/ralewayregular"
+            android:text="Random Category"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_lol"
+            android:layout_gravity="center"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_highScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:strokeColor="@color/red"
+            app:strokeWidth="1dp"
+            android:backgroundTint="@color/black"
+            android:padding="10sp"
+            android:fontFamily="@font/ralewayregular"
+            android:text="Current High Score"
+            android:textAllCaps="false"
+            android:textColor="@color/red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_random_category"
+            android:layout_gravity="center"/>
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

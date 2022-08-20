@@ -8,50 +8,48 @@
     android:background="@drawable/ic_activity_bg"
     android:orientation="vertical">
 
-<!--    <com.arkapp.trapeziumview.TrapeziumCustomView-->
-<!--        android:id="@+id/trapeziumCustomView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="350dp"-->
-<!--        android:layout_margin="16dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:shapeColor="@color/red"-->
-<!--        app:edgeRadius="18"-->
-<!--        app:slopeLength="88"-->
-<!--        app:slopeType="bottomRight" />-->
+    <!--    <com.arkapp.trapeziumview.TrapeziumCustomView-->
+    <!--        android:id="@+id/trapeziumCustomView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="350dp"-->
+    <!--        android:layout_margin="16dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:shapeColor="@color/red"-->
+    <!--        app:edgeRadius="18"-->
+    <!--        app:slopeLength="88"-->
+    <!--        app:slopeType="bottomRight" />-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
+            android:fontFamily="@font/ralewaybold"
+            android:text="Dave "
+            android:textColor="@color/red"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingLeft="30dp"
+            android:paddingTop="20dp"
+            android:layout_marginRight="10dp"/>
 
-            <TextView
-                android:id="@+id/tv_username"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/ralewaybold"
-                android:text="Dave "
-                android:textColor="@color/red"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:paddingLeft="30dp"
-                android:paddingTop="20dp"
-                android:layout_marginRight="10dp"/>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_score"
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textSize="16sp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_score"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="16sp"/>
 
 
-        </LinearLayout>
-
-
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tv_category"
@@ -99,65 +97,110 @@
         android:textColor="@color/white"
         />
 
+    <!--    <com.google.android.material.button.MaterialButtonToggleGroup-->
+    <!--        android:id="@+id/toggleButton"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content">-->
+
+
+    <!--        <com.google.android.material.button.MaterialButton-->
+    <!--            android:id="@+id/button1"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="150dp"-->
+    <!--            android:layout_weight="0.5"-->
+    <!--            android:text="Answer"-->
+    <!--            android:textAllCaps="false"-->
+    <!--            android:fontFamily="@font/ralewayregular"/>-->
+
+    <!--        <Space-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="0.1"/>-->
+
+
+    <!--        <com.google.android.material.button.MaterialButton-->
+    <!--            android:id="@+id/button2"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="150dp"-->
+    <!--            android:layout_weight="0.5"-->
+    <!--            android:text="Answer"-->
+    <!--            android:textAllCaps="false"-->
+    <!--            android:fontFamily="@font/ralewayregular"/>-->
+
+    <!--        <com.google.android.material.button.MaterialButton-->
+    <!--            android:id="@+id/button3"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="150dp"-->
+    <!--            android:layout_weight="0.5"-->
+    <!--            android:text="Answer"-->
+    <!--            android:textAllCaps="false"-->
+    <!--            android:fontFamily="@font/ralewayregular"/>-->
+
+    <!--        <Space-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="0.1"/>-->
+
+
+    <!--        <com.google.android.material.button.MaterialButton-->
+    <!--            android:id="@+id/button4"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="150dp"-->
+    <!--            android:layout_weight="0.5"-->
+    <!--            android:text="Answer"-->
+    <!--            android:textAllCaps="false"-->
+    <!--            android:fontFamily="@font/ralewayregular"/>-->
+
+    <!--    </com.google.android.material.button.MaterialButtonToggleGroup>-->
+
     <com.google.android.material.button.MaterialButtonToggleGroup
-        android:id="@+id/btn_group"
+        android:id="@+id/toggleButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/a1"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:layout_weight="0.5"
-            android:text="Answer"
-            android:textAllCaps="false"
-            android:fontFamily="@font/ralewayregular"/>
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.1"/>
-
+        android:layout_height="wrap_content"
+        app:singleSelection="true"
+        android:orientation="vertical"
+        android:layout_gravity="center">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/a2"
-            android:layout_width="wrap_content"
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_weight="0.5"
+            android:layout_weight="1"
             android:text="Answer"
+            android:textColor="@color/white"
             android:textAllCaps="false"
-            android:fontFamily="@font/ralewayregular"/>
+            android:layout_marginStart="10dp"/>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/a3"
-            android:layout_width="wrap_content"
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_weight="0.5"
+            android:layout_weight="1"
+            android:textColor="@color/white"
             android:text="Answer"
             android:textAllCaps="false"
-            android:fontFamily="@font/ralewayregular"/>
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.1"/>
-
+            android:layout_marginStart="10dp" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/a4"
-            android:layout_width="wrap_content"
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_weight="0.5"
+            android:layout_weight="1"
             android:text="Answer"
+            android:textColor="@color/white"
             android:textAllCaps="false"
-            android:fontFamily="@font/ralewayregular"/>
+            android:layout_marginStart="10dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:text="Answer"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_marginStart="10dp"/>
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
-
-
-
-
-
 
 </LinearLayout>

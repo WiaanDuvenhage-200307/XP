@@ -1,13 +1,15 @@
 package com.example.xp
 
+import android.R
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Window
 import android.view.WindowManager
-import android.widget.Button
-import com.example.xp.databinding.ActivityCategoriesBinding
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import com.example.xp.databinding.ActivityQuestionsBinding
 import com.example.xp.models.Constants.getCodQuestions
 import com.example.xp.models.Constants.getCsgoQuestions
@@ -16,17 +18,31 @@ import com.example.xp.models.Constants.getLeagueQuestions
 import com.example.xp.models.Constants.getOverwatchQuestions
 import com.example.xp.models.Constants.getValorantQuestions
 import com.example.xp.models.Question
-import com.google.android.material.button.MaterialButton
+import com.google.android.material.button.MaterialButtonToggleGroup.OnButtonCheckedListener
+
 
 class QuestionsActivity : AppCompatActivity() {
+
+    var backPressedTime: Long = 0
 
     private lateinit var binding: ActivityQuestionsBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        //exits app if user taps back on device
+        if (backPressedTime + 3000 > System.currentTimeMillis()) {
+            super.onBackPressed()
+            finish()
+        }
+
+        backPressedTime = System.currentTimeMillis()
+
         //Make Application Fullscree
         requestWindowFeature(Window.FEATURE_NO_TITLE)
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        this.getWindow().setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
 
         binding = ActivityQuestionsBinding.inflate(layoutInflater)
         val categoryName = intent.getStringExtra("catName").toString()
@@ -39,216 +55,141 @@ class QuestionsActivity : AppCompatActivity() {
         binding.tvCategory.text = categoryName
         setContentView(binding.root)
 
-        if(selectedCategory == "cod"){
-            //pass Call of Duty questions
-            val questions = getCodQuestions()
-            //set questions to first question
-            var questionNumber = intent.getIntExtra("questionNumber", 0)
+        // Question Number
+        var questionNumber = intent.getIntExtra("questionNumber", 0)
 
-            //get index of current question
-            val currentQuestion = questions[questionNumber]
+        // Questions
+        var questions: ArrayList<Question> = arrayListOf()
 
-            //Set score to the frontend
-            binding.btnScore.text = score.toString()
-
-            //show question number in questions view
-            binding.tvQueNum.text = "Question ${currentQuestion.id}"
-
-            updateUi(currentQuestion, username)
-
-            var bg = binding.btnGroup
-
-
-            binding.a4.setOnClickListener{
-
-
-
-//                Log.i("!selected answer: ", userAnswer)
-//                if(questionNumber + 1 == questions.count()){
-//                    //TODO: Navigate to Results Activity
-//                    val intent = Intent(this, ResultsActivity::class.java)
-//                    intent.putExtra("username", username)
-//                    startActivity(intent)
-//                    finish()
-//                } else {
-//                    questions
-//                    //Navigate to next question
-//                    //TODO: Capture the answered question (validation)
-//                    val intent = Intent(this, QuestionsActivity::class.java)
-//                    //pass username and next question value
-//                    intent.putExtra("username", username)
-//                    intent.putExtra("catName", categoryName)
-//                    intent.putExtra("category", selectedCategory)
-//                    intent.putExtra("questionNumber", questionNumber + 1)
-//                    //TODO: pass score
-//
-//                    startActivity(intent)
-//                    finish()
-//                }
+        when (selectedCategory) {
+            "cod" -> {
+                questions = getCodQuestions()
             }
-
-        } else if (selectedCategory == "csgo"){
-            val questions = getCsgoQuestions()
-            var questionNumber = intent.getIntExtra("questionNumber", 0)
-            val currentQuestion = questions[questionNumber]
-            updateUi(currentQuestion, username)
-
-            binding.a4.setOnClickListener{
-                if(questionNumber + 1 == questions.count()){
-                    //TODO: Navigate to Results Activity
-                    val intent = Intent(this, ResultsActivity::class.java)
-                    intent.putExtra("username", username)
-                    startActivity(intent)
-                    finish()
-                } else {
-                    questions
-                    //Navigate to next question
-
-                    //TODO: Capture the answered question (validation)
-                    val intent = Intent(this, QuestionsActivity::class.java)
-                    //pass username and next question value
-                    intent.putExtra("username", username)
-                    intent.putExtra("catName", categoryName)
-                    intent.putExtra("category", selectedCategory)
-                    intent.putExtra("questionNumber", questionNumber + 1)
-                    //TODO: pass score
-
-                    startActivity(intent)
-                    finish()
-                }
+            "csgo" -> {
+                questions = getCsgoQuestions()
             }
-
-        } else if (selectedCategory == "fortnite"){
-            val questions = getFortniteQuestions()
-            var questionNumber = intent.getIntExtra("questionNumber", 0)
-            val currentQuestion = questions[questionNumber]
-            updateUi(currentQuestion, username)
-
-            binding.a4.setOnClickListener{
-                if(questionNumber + 1 == questions.count()){
-                    //TODO: Navigate to Results Activity
-                    val intent = Intent(this, ResultsActivity::class.java)
-                    intent.putExtra("username", username)
-                    startActivity(intent)
-                    finish()
-                } else {
-                    questions
-                    //Navigate to next question
-
-                    //TODO: Capture the answered question (validation)
-                    val intent = Intent(this, QuestionsActivity::class.java)
-                    //pass username and next question value
-                    intent.putExtra("username", username)
-                    intent.putExtra("catName", categoryName)
-                    intent.putExtra("category", selectedCategory)
-                    intent.putExtra("questionNumber", questionNumber + 1)
-                    //TODO: pass score
-
-                    startActivity(intent)
-                    finish()
-                }
+            "fortnite" -> {
+                questions = getFortniteQuestions()
             }
-
-        } else if (selectedCategory == "lol"){
-            val questions = getLeagueQuestions()
-            var questionNumber = intent.getIntExtra("questionNumber", 0)
-            val currentQuestion = questions[questionNumber]
-            updateUi(currentQuestion, username)
-
-            binding.a4.setOnClickListener{
-                if(questionNumber + 1 == questions.count()){
-                    //TODO: Navigate to Results Activity
-                    val intent = Intent(this, ResultsActivity::class.java)
-                    intent.putExtra("username", username)
-                    startActivity(intent)
-                    finish()
-                } else {
-                    questions
-                    //Navigate to next question
-
-                    //TODO: Capture the answered question (validation)
-                    val intent = Intent(this, QuestionsActivity::class.java)
-                    //pass username and next question value
-                    intent.putExtra("username", username)
-                    intent.putExtra("catName", categoryName)
-                    intent.putExtra("category", selectedCategory)
-                    intent.putExtra("questionNumber", questionNumber + 1)
-                    //TODO: pass score
-
-                    startActivity(intent)
-                    finish()
-                }
+            "lol" -> {
+                questions = getLeagueQuestions()
             }
-
-        } else if (selectedCategory == "ow"){
-            val questions = getOverwatchQuestions()
-            var questionNumber = intent.getIntExtra("questionNumber", 0)
-            val currentQuestion = questions[questionNumber]
-            updateUi(currentQuestion, username)
-
-            binding.a4.setOnClickListener{
-                if(questionNumber + 1 == questions.count()){
-                    //TODO: Navigate to Results Activity
-                    val intent = Intent(this, ResultsActivity::class.java)
-                    intent.putExtra("username", username)
-                    startActivity(intent)
-                    finish()
-                } else {
-                    questions
-                    //Navigate to next question
-
-                    //TODO: Capture the answered question (validation)
-                    val intent = Intent(this, QuestionsActivity::class.java)
-                    //pass username and next question value
-                    intent.putExtra("username", username)
-                    intent.putExtra("catName", categoryName)
-                    intent.putExtra("category", selectedCategory)
-                    intent.putExtra("questionNumber", questionNumber + 1)
-                    //TODO: pass score
-
-                    startActivity(intent)
-                    finish()
-                }
+            "ow" -> {
+                questions = getOverwatchQuestions()
             }
-
-        } else {
-            selectedCategory == "val"
-            val questions = getValorantQuestions()
-            var questionNumber = intent.getIntExtra("questionNumber", 0)
-            val currentQuestion = questions[questionNumber]
-            updateUi(currentQuestion, username)
-
-            binding.a4.setOnClickListener{
-                if(questionNumber + 1 == questions.count()){
-                    //TODO: Navigate to Results Activity
-                    val intent = Intent(this, ResultsActivity::class.java)
-                    intent.putExtra("username", username)
-                    startActivity(intent)
-                    finish()
-                } else {
-                    questions
-                    //Navigate to next question
-
-                    //TODO: Capture the answered question (validation)
-                    val intent = Intent(this, QuestionsActivity::class.java)
-                    //pass username and next question value
-                    intent.putExtra("username", username)
-                    intent.putExtra("catName", categoryName)
-                    intent.putExtra("category", selectedCategory)
-                    intent.putExtra("questionNumber", questionNumber + 1)
-                    //TODO: pass score
-
-                    startActivity(intent)
-                    finish()
-                }
+            "valorant" -> {
+                questions = getValorantQuestions()
             }
-
         }
 
+        // Gets Question
+        val currentQuestion = questions[questionNumber]
 
+        //Set score to the frontend
+        binding.btnScore.text = score.toString()
 
+        Log.i("Test", score.toString())
 
+        //show question number in questions view
+        binding.tvQueNum.text = "Question ${questionNumber + 1}"
 
+        updateUi(currentQuestion, username)
+
+        binding.toggleButton.addOnButtonCheckedListener(OnButtonCheckedListener { group, checkedId, isChecked ->
+            when (binding.toggleButton.checkedButtonId) {
+                binding.button1.id -> {
+                    var answer = binding.button1.text.toString()
+                    Log.i("Test", answer)
+                    navigate(
+                        currentQuestion,
+                        questions,
+                        username,
+                        categoryName,
+                        selectedCategory,
+                        questionNumber,
+                        answer,
+                        score
+                    )
+                }
+                binding.button2.id -> {
+                    var answer = binding.button2.text.toString()
+                    Log.i("Test", answer)
+                    navigate(
+                        currentQuestion,
+                        questions,
+                        username,
+                        categoryName,
+                        selectedCategory,
+                        questionNumber,
+                        answer,
+                        score
+                    )
+                }
+                binding.button3.id -> {
+                    var answer = binding.button3.text.toString()
+                    Log.i("Test", answer)
+                    navigate(
+                        currentQuestion,
+                        questions,
+                        username,
+                        categoryName,
+                        selectedCategory,
+                        questionNumber,
+                        answer,
+                        score
+                    )
+                }
+                binding.button4.id -> {
+                    var answer = binding.button4.text.toString()
+                    Log.i("Test", answer)
+                    navigate(
+                        currentQuestion,
+                        questions,
+                        username,
+                        categoryName,
+                        selectedCategory,
+                        questionNumber,
+                        answer,
+                        score
+                    )
+                }
+            }
+        })
+    }
+    fun navigate(currentQuestion: Question, questions: ArrayList<Question>, username: String, catName: String, catSelected: String, questionNumber: Int, answer: String, score: Int){
+        if(questionNumber == questions.count() -1){
+            val intent = Intent(this, ResultsActivity::class.java)
+            //first check if last answer is correct before navigating
+            if(currentQuestion.correctAnswer == answer) {
+                intent.putExtra("score", (score + 1).toString())
+                Log.i("QuestionFinalScore: ", score.toString())
+            } else {
+                intent.putExtra("score", score.toString())
+            }
+            intent.putExtra("username", username)
+            startActivity(intent)
+            finish()
+
+        } else {
+
+            //Navigate to next question
+            val intent = Intent(this, QuestionsActivity::class.java)
+            //pass username and next question value
+            intent.putExtra("username", username)
+            intent.putExtra("catName", catName)
+            intent.putExtra("category", catSelected)
+            intent.putExtra("questionNumber", questionNumber + 1)
+
+            if(currentQuestion.correctAnswer == answer) {
+                intent.putExtra("score", score + 1)
+            } else {
+
+                intent.putExtra("score", score)
+            }
+
+            startActivity(intent)
+            finish()
+        }
     }
 
     fun updateUi(currentQuestion: Question, username: String){
@@ -258,10 +199,10 @@ class QuestionsActivity : AppCompatActivity() {
             binding.tvQuestionText.text = "${currentQuestion.questionText}"
         }
 
-        binding.a1.text = currentQuestion.answerOne
-        binding.a2.text = currentQuestion.answerTwo
-        binding.a3.text = currentQuestion.answerThree
-        binding.a4.text = currentQuestion.answerFour
+        binding.button1.text = currentQuestion.answerOne
+        binding.button2.text = currentQuestion.answerTwo
+        binding.button3.text = currentQuestion.answerThree
+        binding.button4.text = currentQuestion.answerFour
         binding.ivQueImg.setImageResource(currentQuestion.img)
     }
 }

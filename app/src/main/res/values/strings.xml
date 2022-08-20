@@ -11,4 +11,14 @@
     <!-- Button Strings -->
     <string name="next">Next</string>
     <string name="restart">Start Over</string>
+
+    <!-- Setting Strings-->
+    <string name="aboutApp">Welcome to XP! A esports quiz app I developed, that quizzes users on everything relating to esports and its respective games.</string>
+    <string name="aboutApp2">XP has categories from esports all over the esports scene. Anything from Counter Strike, League of Legends all the way up to new titles like Valorant.</string>
+    <string name="aboutMe">Hi, my name is Wiaan Duvenhage! \n I am a 2nd year full-stack developer student \n at The Open Window.</string>
+    <string name="aboutMe2">What do you think about XP? I hope you enjoyed playing the game and learned something about esports from different games.</string>
+
+    <!-- Modal String -->
+    <string name="dialogHeading">Current Highscore</string>
+
 </resources>

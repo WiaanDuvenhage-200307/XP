@@ -1,13 +1,18 @@
 package com.example.xp
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.view.Window
 import android.view.WindowManager
+import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import com.example.xp.databinding.ActivityCategoriesBinding
+import com.example.xp.models.Constants
 import com.example.xp.models.Constants.getCodQuestions
 import com.example.xp.models.Constants.getCsgoQuestions
 import com.example.xp.models.Constants.getFortniteQuestions
@@ -34,7 +39,14 @@ class CategoriesActivity : AppCompatActivity() {
 
         dataReceive = findViewById(R.id.tv_username)
 
+        val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
+        val editor = sharedPref.edit()
+        val user = sharedPref.getString(Constants.USER_NAME, "")
+        val userHighScore = sharedPref.getString(Constants.HIGH_SCORE, "")
+
         val username = intent.getStringExtra("username").toString()
+
+        var highScore: String = ""
 
         binding.tvUsername.text = username
 
@@ -107,6 +119,27 @@ class CategoriesActivity : AppCompatActivity() {
             startActivity(intent)
 
 
+        }
+
+
+
+        binding.btnHighScore.setOnClickListener {
+            //TODO: Show Popup modal of current High Score
+            val view = View.inflate(this@CategoriesActivity, R.layout.activity_dialog, null)
+
+            val builder = AlertDialog.Builder(this)
+            //sets the view to this dialog xml file
+            builder.setView(view)
+
+            val dialog = builder.create()
+            //show the dialog
+            dialog.show()
+            dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+            //close the dialog
+            view.findViewById<Button>(R.id.btn_confirm).setOnClickListener{
+                dialog.dismiss()
+            }
         }
     }
 }

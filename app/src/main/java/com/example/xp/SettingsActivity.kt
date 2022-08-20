@@ -1,12 +1,15 @@
 package com.example.xp
 
+import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
 import com.example.xp.databinding.ActivityHomeBinding
 import com.example.xp.databinding.ActivitySettingsBinding
+import com.example.xp.models.Constants
 
 class SettingsActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySettingsBinding
@@ -25,6 +28,16 @@ class SettingsActivity : AppCompatActivity() {
 
         binding.btnReset.setOnClickListener {
             //TODO: Reset Scores
+            val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
+            val editor = sharedPref.edit()
+            val user = sharedPref.getString(Constants.USER_NAME, "")
+            val userHighScore = sharedPref.getString(Constants.HIGH_SCORE, "")
+        }
+
+        //Navigate to Github
+        binding.llGithub.setOnClickListener{
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/WiaanDuvenhage-200307"))
+            startActivity(browserIntent)
         }
     }
 }
