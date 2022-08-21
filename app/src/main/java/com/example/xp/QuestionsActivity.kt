@@ -170,10 +170,11 @@ class QuestionsActivity : AppCompatActivity() {
             } else {
                 intent.putExtra("score", score.toString())
             }
+
             if(score > highScore && currentQuestion.correctAnswer == answer){
                 editor.apply{
                     putString(Constants.USER_NAME, username)
-                    putInt(Constants.HIGH_SCORE, score + 1)
+                    putInt(Constants.HIGH_SCORE, score)
                     apply() //to end
                 }
             } else if (score > highScore) {
@@ -183,6 +184,7 @@ class QuestionsActivity : AppCompatActivity() {
                     apply() //to end
                 }
             }
+
             intent.putExtra("username", username)
             startActivity(intent)
             finish()
@@ -199,19 +201,23 @@ class QuestionsActivity : AppCompatActivity() {
             intent.putExtra("questionNumber", questionNumber + 1)
 
             if(currentQuestion.correctAnswer == answer) {
-                intent.putExtra("score", score + 1)
+                val currentQuestion = intent.putExtra("score", score + 1)
+                Log.i("currentQuestion", currentQuestion.toString())
             } else {
-                intent.putExtra("score", score)
+                intent.putExtra("score", score )
             }
 
             if(score > highScore && currentQuestion.correctAnswer == answer){
                 editor.apply{
+                    putString(Constants.USER_NAME, username)
                     putInt(Constants.HIGH_SCORE, score + 1)
+                    Log.i("HIGH_SCORE", score.toString())
                     apply() //to end
                 }
             } else if (score > highScore) {
                 editor.apply{
-                    putInt(Constants.HIGH_SCORE, score)
+                    putString(Constants.USER_NAME, username)
+                    putInt(Constants.HIGH_SCORE, score + 1)
                     apply() //to end
                 }
             }
