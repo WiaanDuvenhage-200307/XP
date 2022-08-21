@@ -21,7 +21,7 @@
 <h3 align="center">XP</h3>
 
   <p align="center">
-    A Kotlin Application that quizzes users on their Esport knowledge.<br>
+    An Android Application built with Kotlin, that quizzes users on their esports knowledge.<br>
 
    <br />
    <br />
