@@ -1,6 +1,7 @@
 package com.example.xp
 
 import android.R
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -11,6 +12,7 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.xp.databinding.ActivityQuestionsBinding
+import com.example.xp.models.Constants
 import com.example.xp.models.Constants.getCodQuestions
 import com.example.xp.models.Constants.getCsgoQuestions
 import com.example.xp.models.Constants.getFortniteQuestions
@@ -88,7 +90,7 @@ class QuestionsActivity : AppCompatActivity() {
         //Set score to the frontend
         binding.btnScore.text = score.toString()
 
-        Log.i("Test", score.toString())
+
 
         //show question number in questions view
         binding.tvQueNum.text = "Question ${questionNumber + 1}"
@@ -99,7 +101,6 @@ class QuestionsActivity : AppCompatActivity() {
             when (binding.toggleButton.checkedButtonId) {
                 binding.button1.id -> {
                     var answer = binding.button1.text.toString()
-                    Log.i("Test", answer)
                     navigate(
                         currentQuestion,
                         questions,
@@ -113,7 +114,6 @@ class QuestionsActivity : AppCompatActivity() {
                 }
                 binding.button2.id -> {
                     var answer = binding.button2.text.toString()
-                    Log.i("Test", answer)
                     navigate(
                         currentQuestion,
                         questions,
@@ -127,7 +127,6 @@ class QuestionsActivity : AppCompatActivity() {
                 }
                 binding.button3.id -> {
                     var answer = binding.button3.text.toString()
-                    Log.i("Test", answer)
                     navigate(
                         currentQuestion,
                         questions,
@@ -141,7 +140,6 @@ class QuestionsActivity : AppCompatActivity() {
                 }
                 binding.button4.id -> {
                     var answer = binding.button4.text.toString()
-                    Log.i("Test", answer)
                     navigate(
                         currentQuestion,
                         questions,
@@ -157,18 +155,38 @@ class QuestionsActivity : AppCompatActivity() {
         })
     }
     fun navigate(currentQuestion: Question, questions: ArrayList<Question>, username: String, catName: String, catSelected: String, questionNumber: Int, answer: String, score: Int){
+
+        //Shared Preferences
+        val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
+        val editor = sharedPref.edit()
+        val user = sharedPref.getString(Constants.USER_NAME, "")
+        val highScore = sharedPref.getInt(Constants.HIGH_SCORE, 0)
+
         if(questionNumber == questions.count() -1){
             val intent = Intent(this, ResultsActivity::class.java)
             //first check if last answer is correct before navigating
             if(currentQuestion.correctAnswer == answer) {
                 intent.putExtra("score", (score + 1).toString())
-                Log.i("QuestionFinalScore: ", score.toString())
             } else {
                 intent.putExtra("score", score.toString())
+            }
+            if(score > highScore && currentQuestion.correctAnswer == answer){
+                editor.apply{
+                    putString(Constants.USER_NAME, username)
+                    putInt(Constants.HIGH_SCORE, score + 1)
+                    apply() //to end
+                }
+            } else if (score > highScore) {
+                editor.apply{
+                    putString(Constants.USER_NAME, username)
+                    putInt(Constants.HIGH_SCORE, score)
+                    apply() //to end
+                }
             }
             intent.putExtra("username", username)
             startActivity(intent)
             finish()
+
 
         } else {
 
@@ -183,8 +201,19 @@ class QuestionsActivity : AppCompatActivity() {
             if(currentQuestion.correctAnswer == answer) {
                 intent.putExtra("score", score + 1)
             } else {
-
                 intent.putExtra("score", score)
+            }
+
+            if(score > highScore && currentQuestion.correctAnswer == answer){
+                editor.apply{
+                    putInt(Constants.HIGH_SCORE, score + 1)
+                    apply() //to end
+                }
+            } else if (score > highScore) {
+                editor.apply{
+                    putInt(Constants.HIGH_SCORE, score)
+                    apply() //to end
+                }
             }
 
             startActivity(intent)

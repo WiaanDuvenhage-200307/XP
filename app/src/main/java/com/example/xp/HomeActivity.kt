@@ -2,7 +2,6 @@ package com.example.xp
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.Window
 import android.view.WindowManager
 import android.widget.Toast
@@ -33,7 +32,6 @@ class HomeActivity : AppCompatActivity() {
             if(username.toString() == ""){
                 var snackbar = Snackbar.make(it, "Please Enter Your Name", Snackbar.LENGTH_LONG)
                 snackbar.setAction("OK", {
-                    Log.i("OK SnackBar", "Yes")
                 })
                 snackbar.show()
                 binding.userName.error = "Please add username"

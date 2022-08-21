@@ -5,10 +5,8 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Window
 import android.view.WindowManager
-import com.example.xp.databinding.ActivityHomeBinding
 import com.example.xp.databinding.ActivitySettingsBinding
 import com.example.xp.models.Constants
 
@@ -21,6 +19,8 @@ class SettingsActivity : AppCompatActivity() {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         binding = ActivitySettingsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val userScore = intent.getStringExtra("finalScore").toString()
 
         val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
         val editor = sharedPref.edit()
@@ -39,6 +39,7 @@ class SettingsActivity : AppCompatActivity() {
                 putInt(Constants.HIGH_SCORE, 0)
                 apply() //to end
             }
+            startActivity(intent)
         }
 
         //Navigate to Github
@@ -46,5 +47,7 @@ class SettingsActivity : AppCompatActivity() {
             val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/WiaanDuvenhage-200307"))
             startActivity(browserIntent)
         }
+        binding.tvHighScoreHolder.text = user
+        binding.tvHighScore.text = userHighScore.toString()
     }
 }

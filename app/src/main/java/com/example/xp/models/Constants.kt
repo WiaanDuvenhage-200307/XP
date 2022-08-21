@@ -5,8 +5,8 @@ import com.example.xp.R
 object Constants {
 
     //constants for capturing user info and score for sharedPref
-    val USER_NAME: String = ""
-    val HIGH_SCORE: String = ""
+    val USER_NAME: String = "username"
+    val HIGH_SCORE: String = "highscore"
 
     //method that will return the questions
     fun getCodQuestions() : ArrayList<Question> {

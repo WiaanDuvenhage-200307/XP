@@ -1,12 +1,13 @@
 package com.example.xp
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Window
 import android.view.WindowManager
 import com.example.xp.databinding.ActivityResultsBinding
+import com.example.xp.models.Constants
 
 class ResultsActivity : AppCompatActivity() {
 
@@ -25,6 +26,11 @@ class ResultsActivity : AppCompatActivity() {
             super.onBackPressed()
             finish()
         }
+
+        val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
+        val editor = sharedPref.edit()
+        val user = sharedPref.getString(Constants.USER_NAME, "")
+        val userHighScore = sharedPref.getInt(Constants.HIGH_SCORE, 0)
 
         val username = intent.getStringExtra("username").toString()
 
@@ -48,11 +54,12 @@ class ResultsActivity : AppCompatActivity() {
 
         binding.btnRestart.setOnClickListener{
 
-            val intent = Intent(this, CategoriesActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             //sends the username back to the categories view to be accessible
             intent.putExtra("username", username)
             intent.putExtra("finalScore", score)
             startActivity(intent)
+
         }
     }
 }
