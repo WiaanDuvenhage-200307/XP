@@ -1,12 +1,11 @@
-<!-- REPLACE ALL THE [WiaanDuvenhage-200307] TEXT WITH YOUR GITHUB PROFILE NAME & THE [salubrious] WITH THE NAME OF YOUR GITHUB PROJECT -->
 
 <!-- Repository Information & Links-->
 <br />
 
-![GitHub repo size](https://img.shields.io/github/repo-size/WiaanDuvenhage-200307/XP)
-![GitHub watchers](https://img.shields.io/github/watchers/WiaanDuvenhage-200307/XP)
-![GitHub language count](https://img.shields.io/github/languages/count/WiaanDuvenhage-200307/XP)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/WiaanDuvenhage-200307/XP)
+![GitHub repo size](https://img.shields.io/github/repo-size/WiaanDuvenhage-200307/XP?color=red)
+![GitHub watchers](https://img.shields.io/github/watchers/WiaanDuvenhage-200307/XP?color=red)
+![GitHub language count](https://img.shields.io/github/languages/count/WiaanDuvenhage-200307/XP?color=red)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/WiaanDuvenhage-200307/XP?color=red)
 
 <!-- HEADER SECTION -->
 <h5 align="center" style="padding:0;margin:0;">Wiaan Duvenhage</h5>
@@ -16,7 +15,7 @@
 <p align="center">
 
   <a href="https://github.com/WiaanDuvenhage-200307/XP">
-    <img src="src\components\assets\logo.svg" alt="Logo" width="100px">
+    <img src="Images/xp.png" width="100px">
   </a>
 
 <h3 align="center">XP</h3>
@@ -74,7 +73,11 @@ Welcome to XP! An Esports Quiz Android Application built using Kotlin that quizz
 ### Built With
 
 - [Kotlin](https://kotlinlang.org/)
-- [Android Studio](https://developer.android.com/studio?gclid=Cj0KCQjwz96WBhC8ARIsAATR250jFPJ2MONLOS8qGczwV0KT2LHqQajMSI2-vzVV2HNleq99xP50m_kaAkJiEALw_wcB&gclsrc=aw.ds)
+- [Android Studio](https://developer.android.com/studio?gclid=CjwKCAjwuYWSBhByEiwAKd_n_q4WXi5vcCji08peoWOEsv-KHFT7QWNZNmozB_CIiiSNl_HOUL-1JBoCGx8QAvD_BwE&gclsrc=aw.ds)
+
+<img src="https://4.bp.blogspot.com/-cE71mKJc94w/VrT2tLTxXTI/AAAAAAAACjU/KdygZ1AN0Nc/s1600/image04.png" width="5%" height="5%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Kotlin_Icon.svg/512px-Kotlin_Icon.svg.png?20171012085709" width="5%" height="5%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <!-- GETTING STARTED -->
 <!-- Make sure to add appropriate information about what prerequesite technologies the user would need and also the steps to install your project on their own mashines -->
