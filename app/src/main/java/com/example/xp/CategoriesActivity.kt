@@ -125,7 +125,6 @@ class CategoriesActivity : AppCompatActivity() {
 
         binding.btnHighScore.setOnClickListener {
 
-
             val view = View.inflate(this, R.layout.activity_dialog, null)
 
             val builder = AlertDialog.Builder(this)
