@@ -206,6 +206,15 @@
 
         </LinearLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="version 1.0"
+            android:gravity="center"
+            android:fontFamily="@font/ralewayregular"
+            android:textColor="@color/red"
+            android:layout_marginBottom="20dp"/>
+
 
 
 
