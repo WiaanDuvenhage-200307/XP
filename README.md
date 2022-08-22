@@ -13,7 +13,7 @@
 <p align="center">
 
   <a href="https://github.com/WiaanDuvenhage-200307/XP">
-    <img src="Images/xp.png" width="100px">
+    <img src="Images/xp2.png" width="100px">
   </a>
 
 <h3 align="center">XP</h3>
