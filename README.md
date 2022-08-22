@@ -255,7 +255,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 [image4]: Images/Image4.png
 [image5]: Images/Image5.png
 [image6]: Images/Image6.png
-[image7]: Images/Image7.png
+[image7]: Images/wireframes.png
 [image8]: Images/Image8.png
 [image9]: Images/Image9.png
 [image10]: Images/Image10.png
