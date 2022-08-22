@@ -143,14 +143,17 @@ I am a very huge fan of dark theme applications and using colors that contrast e
 
 ## Development Process
 
-The `Development Process` is the technical implementations and functionality done in the frontend and backend of the application.
+The `Development Process` is the technical implementations and functionality done for the app.
 
 ### Implementation Process
 
-- I used `npx create-react app` to create this React project. I implemented component-based development instead of classes. By doing this, I will be able to easily inject and eject components and sub-components into my project, making it refactorable and reusable instead of writing up classes I have to do everytime making it tedious and redundant
+- For the entirety of the project, I have used <b>Kotlin 1.7.0</b> for the functionality and I used <b>XML</b> for the front-end of the application.
 
-- I implemented the `date-fns` dependency to manipulate and display the time & date the I wanted to and to create my calendar
+#### XML
 
+- I implemented `ScrollView` for my <b>Settings</b> & <b> 
+
+#### Kotlin
 - I incorporated `tailwindcss` to create and style my calendar component the way I wanted it to look
 
 - `axios` was implemented so that I can make HTTP requests to the database server so that I can retrieve and push data to it
@@ -200,10 +203,10 @@ The aspects I learned outside of this class, is that I implemented tailwindcss t
 
 <!-- TODO Change this -->
 
-![image2](PATH)
-![image3](PATH)
-![image4](PATH)
-![image5](PATH)
+![image10](PATH)
+![image11](PATH)
+![image12](PATH)
+![image13](PATH)
 <br>
 
 
@@ -213,7 +216,7 @@ The aspects I learned outside of this class, is that I implemented tailwindcss t
 
 <!-- TODO Change this -->
 
-To see a run through of the application, click below:
+To see a run through of XP, click below:
 
 [View Demonstration](URL)
 
@@ -251,6 +254,9 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 - [Lecturer](https://github.com/armandpret)
 - [Zlatko Plamenov Mockups](https://www.freepik.com/author/zlatko-plamenov)
 - [Vian Du Plessis](https://github.com/Vian-du-Plessis)
+- [unDraw](https://undraw.co/)
+- [No History Activity Element](https://developer.android.com/guide/topics/manifest/activity-element#nohist)
+- [GeeksforGeeks](https://www.geeksforgeeks.org/)
 
 [image1]: Images/aboutproject.jpg
 [image2]: Images/entername.jpg
@@ -263,3 +269,5 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 [image9]: Images/userflow.png
 [image10]: Images/Image10.png
 [image11]: Images/Mockup6.png
+[image12]: Images/Mockup6.png
+[image13]: Images/Mockup6.png
