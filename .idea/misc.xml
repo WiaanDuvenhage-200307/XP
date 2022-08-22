@@ -28,8 +28,13 @@
         <entry key="..\:/College/Second Year/Development/Android/XP/app/src/main/res/drawable/bg_iv.xml" value="0.2335" />
         <entry key="..\:/College/Second Year/Development/Android/XP/app/src/main/res/drawable/bg_linear_layout.xml" value="0.2335" />
         <entry key="..\:/College/Second Year/Development/Android/XP/app/src/main/res/drawable/border.xml" value="0.332" />
+        <entry key="..\:/College/Second Year/Development/Android/XP/app/src/main/res/drawable/ic_activity_bg.xml" value="0.2335" />
+        <entry key="..\:/College/Second Year/Development/Android/XP/app/src/main/res/drawable/ic_arrow_left.xml" value="0.2335" />
+        <entry key="..\:/College/Second Year/Development/Android/XP/app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.2335" />
         <entry key="..\:/College/Second Year/Development/Android/XP/app/src/main/res/drawable/ic_que_bg.xml" value="0.2695" />
-        <entry key="..\:/College/Second Year/Development/Android/XP/app/src/main/res/layout/activity_categories.xml" value="0.25" />
+        <entry key="..\:/College/Second Year/Development/Android/XP/app/src/main/res/drawable/ic_results_activity.xml" value="0.2335" />
+        <entry key="..\:/College/Second Year/Development/Android/XP/app/src/main/res/drawable/ic_splash.xml" value="0.2335" />
+        <entry key="..\:/College/Second Year/Development/Android/XP/app/src/main/res/layout/activity_categories.xml" value="0.1" />
         <entry key="..\:/College/Second Year/Development/Android/XP/app/src/main/res/layout/activity_dialog.xml" value="0.36666666666666664" />
         <entry key="..\:/College/Second Year/Development/Android/XP/app/src/main/res/layout/activity_home.xml" value="0.33" />
         <entry key="..\:/College/Second Year/Development/Android/XP/app/src/main/res/layout/activity_questions.xml" value="0.33" />
