@@ -82,30 +82,21 @@ Welcome to XP! An Esports Quiz Android Application built using Kotlin that quizz
 
 ## Getting Started
 
-The following instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+For development, the latest version of Android Studio is required. The latest version can be downloaded from [Android Studio](https://developer.android.com/studio?gclid=CjwKCAjwuYWSBhByEiwAKd_n_q4WXi5vcCji08peoWOEsv-KHFT7QWNZNmozB_CIiiSNl_HOUL-1JBoCGx8QAvD_BwE&gclsrc=aw.ds)
 
 ### Installation
 
-Here are a couple of ways to clone this repo:
+1. Clone the repo
+```sh
+git clone https://github.com/Pieter-stack/Kidcelence.git
+```
+2. Open the project
 
-1.  GitHub Desktop </br>
-    Enter `https://github.com/WiaanDuvenhage-200307/XP.git` into the URL field and press the `Clone` button.
-
-2.  Clone Repository </br>
-    Run the following in the command-line to clone the project:
-
-    ```sh
-    git clone https://github.com/WiaanDuvenhage-200307/XP.git
-    ```
-
-        Open `Software` and select `File | Open...` from the menu. Select cloned directory and press `Open` button
-
-3.  Install Dependencies </br>
-    Run the following in the command-line to install all the required dependencies:
-
-    ```sh
-    npm install
-    ```
+Use `File` : `Open` in Android Studio.
 
 <!-- FEATURES AND FUNCTIONALITY-->
 <!-- You can add the links to all of your imagery at the bottom of the file as references -->
