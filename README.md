@@ -121,8 +121,12 @@ Select a category of the esports game that you wanted to get tested in, by tappi
 Answer the question given to the user on screen by tapping on the red buttons below and your score will be updated depending if you got the quiz question correct
 
 ### Display Score
-![immage5][image5]
+![image5][image5]
 After the user has completed the categories' questions, they can view their score for that category and if they have broken or set a high score they will have a more flared up screen indicating so.
+
+### Show & Reset High Score
+![image6][image6]
+The user can view their high score as well as reset it in the settings page
 
 <!-- CONCEPT PROCESS -->
 <!-- Briefly explain your concept ideation process -->
@@ -254,7 +258,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 [image3]: Images/choosecategory.jpg
 [image4]: Images/answerquiz.jpg
 [image5]: Images/results.jpg
-[image6]: Images/Image6.png
+[image6]: Images/highscore.jpg
 [image7]: Images/wireframes.png
 [image8]: Images/Image8.png
 [image9]: Images/Image9.png
