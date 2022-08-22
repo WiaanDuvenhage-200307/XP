@@ -105,10 +105,10 @@ Use `File` : `Open` in Android Studio.
 
 <!-- note how you can use your gitHub link. Just make a path to your assets folder -->
 
-### Adding an Appointment
+### Entering your username
 
-![image5](PATH)
-The receptionist can add an appointment by assigning a patient to a doctor. They can add the name, date and time and it will display on the page when the page auto-refreshes.
+![image2][image2]
+Enter your name to start with the quiz. This name can be changed if you would want to.
 
 ### Scroll Through Calendar
 
@@ -250,7 +250,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 - [(w3schools) SQL SELECT Statement](https://www.w3schools.com/sql/sql_select.asp)
 
 [image1]: Images/aboutproject.jpg
-[image2]: Images/Image2.png
+[image2]: Images/entername.jpg
 [image3]: Images/Image3.png
 [image4]: Images/Image4.png
 [image5]: Images/Image5.png
