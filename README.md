@@ -66,7 +66,7 @@
 
 ### Project Description
 
-Welcome to XP! An Esports Quiz Android Application built using Kotlin that quizzes users on their Esports Knowledge
+This is XP! A simple quiz app that quizzes users on their knowledge on all types of esports around the world from veteran esports like Counter Strike all the way to new games entering the esports scene like Valorant. This is a fun app that friends can download to see who can get the highest score and ultimately gain XP (experience). People of all ages can play this game, it just has one requirement, be on top of your esports game.
 
 ### Built With
 
