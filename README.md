@@ -5,6 +5,8 @@
 ![GitHub watchers](https://img.shields.io/github/watchers/WiaanDuvenhage-200307/XP?color=red)
 ![GitHub language count](https://img.shields.io/github/languages/count/WiaanDuvenhage-200307/XP?color=red)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/WiaanDuvenhage-200307/XP?color=red)
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Instagram][instagram-shield]][instagram-url]
 
 <h5 align="center" style="padding:0;margin:0;">Wiaan Duvenhage</h5>
 <h5 align="center" style="padding:0;margin:0;">200307</h5>
@@ -147,36 +149,38 @@ The `Development Process` is the technical implementations and functionality don
 
 ### Implementation Process
 
-- For the entirety of the project, I have used <b>Kotlin 1.7.0</b> for the functionality and I used <b>XML</b> for the front-end of the application.
+For the entirety of the project, I have used <b>Kotlin 1.7.0</b> for the functionality and I used <b>XML</b> for the front-end of the application.
 
 #### XML
 
-- I implemented `ScrollView` for my <b>Settings</b> & <b> 
+- I implemented `ScrollView` for my <b>Settings</b> & <b>Category</b> activities
+- `RelativeLayout` was used for my <b>Home</b> activity
+- `ConstraintLayout` was used for my <b>Splash</b> activity
+- `LinearLayout` was used for majority of the project
 
 #### Kotlin
-- I incorporated `tailwindcss` to create and style my calendar component the way I wanted it to look
 
-- `axios` was implemented so that I can make HTTP requests to the database server so that I can retrieve and push data to it
-
-- I used `PHPMyAdmin` to alter data on the database and used PHP to talk to the backend MySQL database
-
-
+- I created a `Constants.kt` object file which held all my question variables and my `sharedPreferences` data
+- I created a `Questions.kt` class file, where I created the model of my question, meaning what data my question is to consist of like if it has an image, how many answers this question has and I also passed a key/value pair, that will check if my question is correct
+- I created a `UpdateUI()` function that will update the question and its answers on one `Questions.kt` activity file instead of creating a different file for each categories' question.
+- I used `Intent` to send and receive data from each activity
+- I also incorporated `SharedPreferences` to save and send data to each activity, like the users score and username, which will be saved conditionally using an `if()` statement
 
 #### Highlights
 
 <!-- stipulated the highlight you experienced with the project -->
 
-- A highlight of this project was defintely interacting with the database and manipulating data on the database and seeing it being displaye on the application.
+- A highlight of this project was definitely learning a new language (Kotlin) and working and developing for mobile.
+- It was also a high point for me to load my app onto my mobile device and interacting with it
+- Fixing all of the bugs I struggled with was also a big plus for me
 
 #### Challenges
 
 <!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
 
-- I struggled to get all my updates and deletes to be implemented.
-- I struggled to get all my profile pictures to be updated and rendered on the DOM from the Database.
-- debugging the CORS error's for sending data to the Database, especially my Register page's CORS error
-- I struggled a lot with debugging the PHP error's
-- Front-end was also a bit tricky because I kept following the trend of putting everything in blocks
+- I encountered a bug that will not pass the score if the last question of the category is correct, essentially giving the user a 4/5 score instead of a 5/5, unfortunately I could not get this fixed, but will be in later stages of development of XP
+- It was very challenging sending and receiving data using `SharedPreferences` but got it figured out in the end
+- I was flabbergasted at how dense Kotlin actually is, so wrapping my head around how the code is written and how data works was a struggle to say the least
 
 #### Above And Beyond
 
@@ -271,3 +275,8 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 [image11]: Images/Mockup6.png
 [image12]: Images/Mockup6.png
 [image13]: Images/Mockup6.png
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/wiaan-duvenhage-95118823a/
+[instagram-shield]: https://img.shields.io/badge/-Instagram-black.svg?style=flat-square&logo=instagram&colorB=555
+[instagram-url]: https://www.instagram.com/wiaan.dev/
