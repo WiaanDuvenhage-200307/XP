@@ -134,13 +134,17 @@ The user can view their high score as well as reset it in the settings page
 
 ## Concept Process
 
-It was very evident that blue is something that is very evident when designing dashboards or management portals for medical firms. So it is the route that I decided to go with Salubrious, I tried keeping it clean with different hue's of blue and some accents of a lime green.
+I am a very huge fan of dark theme applications and using colors that contrast extremely well, so in conclusion I thought it was a no-brainer to use in black, white and red in conjunction with each other to create the most eye-catching application. By looking at my wireframes you would notice that my answering method differs from the final application outcome. I have come to realise how intricate and dense Kotlin can be so decided to go with a more simpler, yet effective answering method.
 
 ### Wireframes
 
 ![image7][image7]
-![image11](PATH)
-![image12](PATH)
+
+### Moodboard
+![image8][image8]
+
+### User Flow
+![image9][image9]
 
 ## Development Process
 
@@ -260,7 +264,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 [image5]: Images/results.jpg
 [image6]: Images/highscore.jpg
 [image7]: Images/wireframes.png
-[image8]: Images/Image8.png
-[image9]: Images/Image9.png
+[image8]: Images/moodboard.png
+[image9]: Images/userflow.png
 [image10]: Images/Image10.png
 [image11]: Images/Mockup6.png
