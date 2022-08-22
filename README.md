@@ -112,7 +112,7 @@ Enter your name to start with the quiz. This name can be changed if you would wa
 
 ### Scroll Through Calendar
 
-![image6](PATH)
+![image3][image3]
 The receptionist can scroll through the calendar to see which date falls on which day, the receptionist can go forward or backward in time using the arrows underneath the month's name.
 
 ### Add Doctor/Patient
@@ -244,14 +244,15 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 <!-- TODO Change this -->
 
 - [Stack Overflow](https://stackoverflow.com/)
-- [Cooolors](https://coolors.co/)
+- [How to add a splash screen](https://www.youtube.com/watch?v=Q0gRqbtFLcw)
 - [Figma](https://www.figma.com/)
-- [My Pinterest Board](https://za.pinterest.com/doubleudeedesigns/budget-app/)
-- [(w3schools) SQL SELECT Statement](https://www.w3schools.com/sql/sql_select.asp)
+- [Lecturer](https://github.com/armandpret)
+- [Zlatko Plamenov Mockups](https://www.freepik.com/author/zlatko-plamenov)
+- [Vian Du Plessis](https://github.com/Vian-du-Plessis)
 
 [image1]: Images/aboutproject.jpg
 [image2]: Images/entername.jpg
-[image3]: Images/Image3.png
+[image3]: Images/choosecategory.jpg
 [image4]: Images/Image4.png
 [image5]: Images/Image5.png
 [image6]: Images/Image6.png
