@@ -182,22 +182,17 @@ For the entirety of the project, I have used <b>Kotlin 1.7.0</b> for the functio
 - It was very challenging sending and receiving data using `SharedPreferences` but got it figured out in the end
 - I was flabbergasted at how dense Kotlin actually is, so wrapping my head around how the code is written and how data works was a struggle to say the least
 
-#### Above And Beyond
-
-<!-- TODO Change this! -->
-
-The aspects I learned outside of this class, is that I implemented tailwindcss to create my calendar, I also incorporated the Date-fns dependency to render my calendar dates.
-
 ### Future Implementation
 
 <!-- TODO Change this! -->
 
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
 
-- I want to complete all my update and delete's of the patients and doctor's
-- I want to fix my styling for my application
-- I want to display the appointments by week
-- I want to complete the profile pictures to be rendered and updated
+- I would like to add more questions
+- I want to change the answering method, making it more intricate and fun
+- I want to implement Firebase or Firestore
+- I want to fix my Shared Preferences bug
+- I want to add more games that are part of the esports world
 
 <!-- MOCKUPS -->
 
@@ -207,10 +202,10 @@ The aspects I learned outside of this class, is that I implemented tailwindcss t
 
 <!-- TODO Change this -->
 
-![image10](PATH)
-![image11](PATH)
-![image12](PATH)
-![image13](PATH)
+![image10][image10]
+![image11][image11]
+![image12][image12]
+![image13][image13]
 <br>
 
 
@@ -271,10 +266,10 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 [image7]: Images/wireframes.png
 [image8]: Images/moodboard.png
 [image9]: Images/userflow.png
-[image10]: Images/Image10.png
-[image11]: Images/Mockup6.png
-[image12]: Images/Mockup6.png
-[image13]: Images/Mockup6.png
+[image10]: Images/mockup1.jpg
+[image11]: Images/mockup2.jpg
+[image12]: Images/mockup3.jpg
+[image13]: Images/mockup4.jpg
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/wiaan-duvenhage-95118823a/
