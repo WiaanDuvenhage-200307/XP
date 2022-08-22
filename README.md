@@ -118,12 +118,11 @@ Select a category of the esports game that you wanted to get tested in, by tappi
 ### Answer Quiz Questions
 
 ![image4][image4]
-Answer the question given to you on screen by tapping on the red buttons below
+Answer the question given to the user on screen by tapping on the red buttons below and your score will be updated depending if you got the quiz question correct
 
-### Only Head Receptionist can add
-![image8](PATH)
-![image10](PATH)
-The head receptionist is the only one authorized to add, delete or update appointments, patients & doctors
+### Display Score
+![immage5][image5]
+After the user has completed the categories' questions, they can view their score for that category and if they have broken or set a high score they will have a more flared up screen indicating so.
 
 <!-- CONCEPT PROCESS -->
 <!-- Briefly explain your concept ideation process -->
@@ -254,7 +253,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 [image2]: Images/entername.jpg
 [image3]: Images/choosecategory.jpg
 [image4]: Images/answerquiz.jpg
-[image5]: Images/Image5.png
+[image5]: Images/results.jpg
 [image6]: Images/Image6.png
 [image7]: Images/wireframes.png
 [image8]: Images/Image8.png
