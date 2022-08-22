@@ -135,7 +135,7 @@ It was very evident that blue is something that is very evident when designing d
 
 ### Wireframes
 
-![image9](PATH)
+![image7][image7]
 ![image11](PATH)
 ![image12](PATH)
 
