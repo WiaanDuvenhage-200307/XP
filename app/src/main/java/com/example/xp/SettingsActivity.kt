@@ -5,7 +5,6 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Window
 import android.view.WindowManager
 import com.example.xp.databinding.ActivitySettingsBinding
@@ -24,9 +23,7 @@ class SettingsActivity : AppCompatActivity() {
         val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
         val editor = sharedPref.edit()
         val user = sharedPref.getString(Constants.USER_NAME, "")
-        Log.i("user", user.toString())
         val userHighScore = sharedPref.getInt(Constants.HIGH_SCORE, 0)
-        Log.i("userHighScore", userHighScore.toString())
 
         binding.btnBack.setOnClickListener{
             val intent = Intent(this, HomeActivity::class.java)

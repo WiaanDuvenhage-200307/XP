@@ -4,12 +4,8 @@ import android.R
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.Window
 import android.view.WindowManager
-import android.widget.EditText
-import android.widget.Toast
-import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.xp.databinding.ActivityQuestionsBinding
 import com.example.xp.models.Constants
@@ -202,7 +198,6 @@ class QuestionsActivity : AppCompatActivity() {
 
             if(currentQuestion.correctAnswer == answer) {
                 val currentQuestion = intent.putExtra("score", score + 1)
-                Log.i("currentQuestion", currentQuestion.toString())
             } else {
                 intent.putExtra("score", score )
             }
@@ -211,7 +206,6 @@ class QuestionsActivity : AppCompatActivity() {
                 editor.apply{
                     putString(Constants.USER_NAME, username)
                     putInt(Constants.HIGH_SCORE, score + 1)
-                    Log.i("HIGH_SCORE", score.toString())
                     apply() //to end
                 }
             } else if (score > highScore) {

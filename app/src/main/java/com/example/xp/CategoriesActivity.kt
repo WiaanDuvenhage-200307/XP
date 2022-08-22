@@ -4,7 +4,6 @@ package com.example.xp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Window
 import android.view.WindowManager
 import android.widget.TextView
@@ -19,7 +18,6 @@ class CategoriesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val prevScore = intent.getStringExtra("finalScore").toString()
-        Log.i("prevScore", prevScore)
 
         //Make Application Fullscree
         requestWindowFeature(Window.FEATURE_NO_TITLE)
