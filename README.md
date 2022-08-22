@@ -110,15 +110,15 @@ Use `File` : `Open` in Android Studio.
 ![image2][image2]
 Enter your name to start with the quiz. This name can be changed if you would want to.
 
-### Scroll Through Calendar
+### Choose a category
 
 ![image3][image3]
-The receptionist can scroll through the calendar to see which date falls on which day, the receptionist can go forward or backward in time using the arrows underneath the month's name.
+Select a category of the esports game that you wanted to get tested in, by tapping on the image tiles below.
 
-### Add Doctor/Patient
+### Answer Quiz Questions
 
-![image7](PATH)
-The receptionist can add a new doctor or patient's information into the modal and it will push to the database and display on the page after it refreshes.
+![image4][image4]
+Answer the question given to you on screen by tapping on the red buttons below
 
 ### Only Head Receptionist can add
 ![image8](PATH)
@@ -253,7 +253,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 [image1]: Images/aboutproject.jpg
 [image2]: Images/entername.jpg
 [image3]: Images/choosecategory.jpg
-[image4]: Images/Image4.png
+[image4]: Images/answerquiz.jpg
 [image5]: Images/Image5.png
 [image6]: Images/Image6.png
 [image7]: Images/wireframes.png
