@@ -15,10 +15,9 @@ class SplashActivity : AppCompatActivity() {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_splash)
 
-
         Handler().postDelayed({
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
-        }, 2000)
+        }, 4000)
     }
 }
