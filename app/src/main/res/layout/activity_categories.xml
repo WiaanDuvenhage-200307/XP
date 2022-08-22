@@ -157,40 +157,6 @@
 
 
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_random_category"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="18sp"
-            android:fontFamily="@font/ralewayregular"
-            android:text="Random Category"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_lol"
-            android:layout_gravity="center"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_highScore"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            app:strokeColor="@color/red"
-            app:strokeWidth="1dp"
-            android:backgroundTint="@color/black"
-            android:padding="10sp"
-            android:fontFamily="@font/ralewayregular"
-            android:text="Current High Score"
-            android:textAllCaps="false"
-            android:textColor="@color/red"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_random_category"
-            android:layout_gravity="center"/>
-
-
-
     </LinearLayout>
 
 

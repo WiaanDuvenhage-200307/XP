@@ -89,7 +89,7 @@
             android:layout_below="@+id/greetheading"
             android:fontFamily="@font/ralewayregular"
             android:text="@string/info_sub"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="14dp" />
 
     </RelativeLayout>
@@ -125,7 +125,7 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:text="@string/next"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:id="@+id/button"/>
 
 
