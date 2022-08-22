@@ -1,5 +1,4 @@
 
-<!-- Repository Information & Links-->
 <br />
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/WiaanDuvenhage-200307/XP?color=red)
@@ -7,7 +6,6 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/WiaanDuvenhage-200307/XP?color=red)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/WiaanDuvenhage-200307/XP?color=red)
 
-<!-- HEADER SECTION -->
 <h5 align="center" style="padding:0;margin:0;">Wiaan Duvenhage</h5>
 <h5 align="center" style="padding:0;margin:0;">200307</h5>
 <h6 align="center">DV203 | Android Introduction</h6>
