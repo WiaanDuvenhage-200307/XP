@@ -62,7 +62,7 @@
 
 <!-- header image of project -->
 
-![image1](PATH)
+![image1][image1]
 
 ### Project Description
 
@@ -257,3 +257,15 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 - [Figma](https://www.figma.com/)
 - [My Pinterest Board](https://za.pinterest.com/doubleudeedesigns/budget-app/)
 - [(w3schools) SQL SELECT Statement](https://www.w3schools.com/sql/sql_select.asp)
+
+[image1]: Images/aboutproject.jpg
+[image2]: Images/Image2.png
+[image3]: Images/Image3.png
+[image4]: Images/Image4.png
+[image5]: Images/Image5.png
+[image6]: Images/Image6.png
+[image7]: Images/Image7.png
+[image8]: Images/Image8.png
+[image9]: Images/Image9.png
+[image10]: Images/Image10.png
+[image11]: Images/Mockup6.png
