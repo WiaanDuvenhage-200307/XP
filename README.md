@@ -25,7 +25,7 @@
 
    <br />
    <br />
-   <a href="URL">View Demo</a>
+   <a href="https://youtu.be/aY9cDdwKBnE">View Demo</a>
     ·
     <a href="https://github.com/WiaanDuvenhage-200307/XP/issues">Report Bug</a>
     ·
@@ -217,7 +217,7 @@ For the entirety of the project, I have used <b>Kotlin 1.7.0</b> for the functio
 
 To see a run through of XP, click below:
 
-[View Demonstration](URL)
+[View Demonstration](https://youtu.be/aY9cDdwKBnE)
 
 See the [open issues](https://github.com/WiaanDuvenhage-200307/XP/issues) for a list of proposed features (and known issues).
 
